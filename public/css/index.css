@@ -189,3 +189,77 @@
         margin-right: 4px;
         background-image: url("../img/icon-common.png");
         background-position: -287px -53px; }
+
+.menu {
+  width: 1200px;
+  margin: 0 auto; }
+  .menu:before, .menu:after {
+    content: " ";
+    display: table; }
+  .menu:after {
+    clear: both; }
+  .menu .left-menu {
+    position: relative;
+    float: left; }
+    .menu .left-menu a:hover {
+      color: #c00; }
+    .menu .left-menu .menu-main {
+      border-left: 1px solid #c00;
+      border-right: 1px solid #c00; }
+    .menu .left-menu .list-item {
+      width: 238px;
+      border-bottom: 1px dashed #dedede; }
+      .menu .left-menu .list-item .small {
+        display: inline-block;
+        width: 100%; }
+        .menu .left-menu .list-item .small h3 {
+          padding-left: 11px;
+          line-height: 30px;
+          background: url(../img/menu_icon.gif) no-repeat right center; }
+        .menu .left-menu .list-item .small div {
+          margin-left: 8px;
+          margin-right: 8px;
+          padding-left: 3px;
+          padding-bottom: 7.5px; }
+      .menu .left-menu .list-item .big {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        display: none;
+        width: 710px;
+        height: 419px;
+        margin-left: 238px;
+        background: #fff4f4; }
+        .menu .left-menu .list-item .big .left {
+          float: left;
+          width: 443px;
+          padding-left: 32px;
+          padding-right: 28px; }
+          .menu .left-menu .list-item .big .left li {
+            line-height: 36px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #dedede;
+            font-size: 14px;
+            font-weight: bold; }
+            .menu .left-menu .list-item .big .left li a {
+              color: #c00; }
+        .menu .left-menu .list-item .big .right {
+          float: right;
+          width: 200px; }
+          .menu .left-menu .list-item .big .right h4 {
+            color: #c00;
+            padding-top: 4px;
+            line-height: 36px; }
+          .menu .left-menu .list-item .big .right li {
+            float: left;
+            line-height: 21px;
+            width: 65px; }
+      .menu .left-menu .list-item:hover {
+        background: #fff4f4;
+        margin-top: -1px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #f34761; }
+      .menu .left-menu .list-item:hover .big {
+        display: block; }

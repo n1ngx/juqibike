@@ -3,6 +3,7 @@ body {
   font-size: 12px; }
 
 a {
+  transition: color 0.5s;
   color: #444;
   text-decoration: none; }
   a:hover {
@@ -14,7 +15,7 @@ ul {
 ul,
 li,
 input,
-h1, h2, h3,
+h1, h2, h3, h4, h5, h5,
 i {
   margin: 0;
   padding: 0; }

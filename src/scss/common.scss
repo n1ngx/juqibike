@@ -4,6 +4,7 @@ body {
   font-size: $font12;
 }
 a {
+  transition: color 0.5s;
   color: $main-color;
   text-decoration: none;
   &:hover {
@@ -15,7 +16,7 @@ ul { list-style: none; }
 ul, 
 li, 
 input,
-h1, h2, h3,
+h1, h2, h3, h4, h5, h5,
 i {
   margin: 0;
   padding: 0;

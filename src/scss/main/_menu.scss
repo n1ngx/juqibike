@@ -1,0 +1,102 @@
+.menu {
+  @include clearfix;
+  width: $w;
+  margin: 0 auto;
+  .left-menu {
+    position: relative;
+    float: left;
+    a:hover {
+      color: $red;
+    }
+    .menu-main {
+      border: {
+        left: 1px solid $red;
+        right: 1px solid $red;
+      }
+    }
+    .list-item {
+      width: 238px;
+      // height: 58px;
+      // background: #0ff;
+      // border-top: 1px solid #fff;
+      border-bottom: 1px dashed #dedede;
+      .small {
+        display: inline-block;
+        width: 100%;
+        h3 {
+          padding: {
+            left: 11px;
+          }
+          line-height: 30px;
+          background: url(../img/menu_icon.gif) no-repeat right center;
+        }
+        div {
+          margin: {
+            left: 8px;
+            right: 8px;
+          }
+          padding-left: 3px;
+          padding-bottom: 7.5px;
+        }
+      }
+      .big {
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        display: none;
+        width: 710px;
+        height: 419px;
+        margin-left: 238px;
+        background: #fff4f4;;
+        .left {
+          float: left;
+          width: 443px;
+          padding: {
+            left: 32px;
+            right: 28px;
+          }
+          li {
+            line-height: 36px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #dedede;
+            a { color: $red; }
+            font: {
+              size: 14px;
+              weight: bold;
+            }
+          }
+        }
+        .right {
+          float: right;
+          width: 200px;
+          h4 {
+            color: $red;
+            padding-top: 4px;
+            line-height: 36px;
+          }
+          li {
+            float: left;
+            line-height: 21px;
+            width: 65px;
+          }
+        }
+      }
+      &:hover {
+        background: #fff4f4;
+        margin-top: -1px;
+        border: {
+          top: 1px solid;
+          bottom: 1px solid;
+        }
+        border-color: #f34761;
+      }
+      &:hover .big{
+        display: block;
+      }
+    }
+  }
+  .right-menu {
+    
+  }
+}
