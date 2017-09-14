@@ -1,0 +1,101 @@
+.head {
+  @include clearfix;
+  width: $w;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  .logo {
+    a {
+      float: left;
+    }
+  }
+  .search {
+    float: left;
+    padding: {
+      left: 24px;
+      top: 33px;
+    }
+    .search-box {
+      @include clearfix;
+      border: 1px solid $red;
+      input {
+        height: 29px;
+        line-height: 29px;
+        float: left;
+        border: none;
+      }
+      .s-input {
+        width: 389px;
+        padding-left: 10px;
+        outline: none;
+      }
+      .s-btn {
+        width: 78px;
+        font-weight: bold;
+        color: #fff;
+        background-color: $red;
+      }
+    }
+    .hot {
+      line-height: 25px;
+      span { 
+        display: inline-block; 
+        vertical-align: top;
+      }
+      ul {
+        @include clearfix;
+        vertical-align: top;
+        display: inline-block;
+        li {
+          float: left;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  .link {
+    a:hover { border-bottom: none; }
+    width: 453px;
+    float: left;
+    padding-top: 30px;
+    .list1 {
+      @include clearfix;
+      li {
+        float: left;
+        line-height: 30px;
+        i {
+          display: inline-block;
+          width: 37px;
+          height: 30px;
+          background: url(../img/icon_ts.png) 0 0 no-repeat;
+          vertical-align: middle;
+        }
+        .bg2 { background-position-x: -40px; }
+        .bg3 { background-position-x: -120px; }
+        span {
+          font-size: 14px;
+          font-weight: bold;
+          color: $red;
+          border-bottom: 1px solid;
+          padding-right: 6px;
+        }
+      }
+    }
+    .list2 {
+      width: 316px;
+      height: 34px;
+      margin-top: 10px;
+      float: right;
+      background-image: url('../img/icon_haiwai.png');
+      li {
+        float: left;
+        a {
+          display: block;
+          width: 150px;
+          height: 34px;
+        }
+      }
+    }
+  }
+}

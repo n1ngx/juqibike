@@ -1,0 +1,26 @@
+{
+  "name": "juqibike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "live-server --browser=chrome --open=public --watch=public --port=8080",
+    "tsc": "tsc --watch",
+    "sass": "node-sass -w -r -o public/css src/scss",
+    "start": "concurrently \"npm run server\" \"npm run tsc\" \"npm run sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1ngx/juqibike.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n1ngx/juqibike/issues"
+  },
+  "homepage": "https://github.com/n1ngx/juqibike#readme",
+  "dependencies": {
+    "@types/jquery": "^1.10.33",
+    "@types/requirejs": "^2.1.31"
+  }
+}

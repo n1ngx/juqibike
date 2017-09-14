@@ -1,0 +1,21 @@
+body {
+  color: $main-color;
+  font-size: $font12;
+}
+a {
+  color: $main-color;
+  text-decoration: none;
+  &:hover {
+    // text-decoration: underline;
+    border-bottom: 1px solid;
+  }
+}
+ul { list-style: none; }
+ul, 
+li, 
+input,
+h1, h2, h3,
+i {
+  margin: 0;
+  padding: 0;
+}

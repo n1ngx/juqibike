@@ -1,0 +1,54 @@
+// 顶部
+.top {
+  height: 40px;
+  background: #f2f2f2;
+  border-bottom: 3px solid #e7e7e7;
+  // 内容-居中
+  .cont {
+    @include clearfix;
+    width: $w;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    line-height: 40px;
+    text-align: center;
+    // 标题
+    .title {
+      float: left;
+      font-size: $font12;
+      font-weight: bold;
+    }
+    // 登录注册
+    .login {
+      float: left;
+      padding-left: 21px;
+      a {
+        color: $red;
+        margin: {
+          left: 5px;
+          right: 5px;
+        }
+      }
+    }
+    // 导航
+    .nav {
+      float: right;
+      ul {
+        @include clearfix;
+        li {
+          float: left;
+          padding: {
+            left: 10px;
+            right: 10px;
+          }
+          span {
+            color: $red;
+            font-weight: bold;
+          }
+        }
+        .main a { color: $red; }
+      }
+    }
+  }
+}

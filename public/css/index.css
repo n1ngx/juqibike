@@ -1,0 +1,158 @@
+body {
+  color: #444;
+  font-size: 12px; }
+
+a {
+  color: #444;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: 1px solid; }
+
+ul {
+  list-style: none; }
+
+ul,
+li,
+input,
+h1, h2, h3,
+i {
+  margin: 0;
+  padding: 0; }
+
+.top {
+  height: 40px;
+  background: #f2f2f2;
+  border-bottom: 3px solid #e7e7e7; }
+  .top .cont {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 40px;
+    text-align: center; }
+    .top .cont:before, .top .cont:after {
+      content: " ";
+      display: table; }
+    .top .cont:after {
+      clear: both; }
+    .top .cont .title {
+      float: left;
+      font-size: 12px;
+      font-weight: bold; }
+    .top .cont .login {
+      float: left;
+      padding-left: 21px; }
+      .top .cont .login a {
+        color: #c00;
+        margin-left: 5px;
+        margin-right: 5px; }
+    .top .cont .nav {
+      float: right; }
+      .top .cont .nav ul:before, .top .cont .nav ul:after {
+        content: " ";
+        display: table; }
+      .top .cont .nav ul:after {
+        clear: both; }
+      .top .cont .nav ul li {
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px; }
+        .top .cont .nav ul li span {
+          color: #c00;
+          font-weight: bold; }
+      .top .cont .nav ul .main a {
+        color: #c00; }
+
+.head {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .head:before, .head:after {
+    content: " ";
+    display: table; }
+  .head:after {
+    clear: both; }
+  .head .logo a {
+    float: left; }
+  .head .search {
+    float: left;
+    padding-left: 24px;
+    padding-top: 33px; }
+    .head .search .search-box {
+      border: 1px solid #c00; }
+      .head .search .search-box:before, .head .search .search-box:after {
+        content: " ";
+        display: table; }
+      .head .search .search-box:after {
+        clear: both; }
+      .head .search .search-box input {
+        height: 29px;
+        line-height: 29px;
+        float: left;
+        border: none; }
+      .head .search .search-box .s-input {
+        width: 389px;
+        padding-left: 10px;
+        outline: none; }
+      .head .search .search-box .s-btn {
+        width: 78px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #c00; }
+    .head .search .hot {
+      line-height: 25px; }
+      .head .search .hot span {
+        display: inline-block;
+        vertical-align: top; }
+      .head .search .hot ul {
+        vertical-align: top;
+        display: inline-block; }
+        .head .search .hot ul:before, .head .search .hot ul:after {
+          content: " ";
+          display: table; }
+        .head .search .hot ul:after {
+          clear: both; }
+        .head .search .hot ul li {
+          float: left;
+          padding: 0 5px; }
+  .head .link {
+    width: 453px;
+    float: left;
+    padding-top: 30px; }
+    .head .link a:hover {
+      border-bottom: none; }
+    .head .link .list1:before, .head .link .list1:after {
+      content: " ";
+      display: table; }
+    .head .link .list1:after {
+      clear: both; }
+    .head .link .list1 li {
+      float: left;
+      line-height: 30px; }
+      .head .link .list1 li i {
+        display: inline-block;
+        width: 37px;
+        height: 30px;
+        background: url(../img/icon_ts.png) 0 0 no-repeat;
+        vertical-align: middle; }
+      .head .link .list1 li .bg2 {
+        background-position-x: -40px; }
+      .head .link .list1 li .bg3 {
+        background-position-x: -120px; }
+      .head .link .list1 li span {
+        font-size: 14px;
+        font-weight: bold;
+        color: #c00;
+        border-bottom: 1px solid;
+        padding-right: 6px; }
+    .head .link .list2 {
+      width: 316px;
+      height: 34px;
+      margin-top: 10px;
+      float: right;
+      background-image: url("../img/icon_haiwai.png"); }
+      .head .link .list2 li {
+        float: left; }
+        .head .link .list2 li a {
+          display: block;
+          width: 150px;
+          height: 34px; }
