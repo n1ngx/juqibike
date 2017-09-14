@@ -1,3 +1,4 @@
+@import 'var';
 body {
   color: $main-color;
   font-size: $font12;
@@ -19,3 +20,4 @@ i {
   margin: 0;
   padding: 0;
 }
+i { font-style: normal; }

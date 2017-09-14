@@ -1,0 +1,23 @@
+body {
+  color: #444;
+  font-size: 12px; }
+
+a {
+  color: #444;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: 1px solid; }
+
+ul {
+  list-style: none; }
+
+ul,
+li,
+input,
+h1, h2, h3,
+i {
+  margin: 0;
+  padding: 0; }
+
+i {
+  font-style: normal; }

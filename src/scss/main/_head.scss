@@ -1,5 +1,6 @@
 .head {
   @include clearfix;
+  a:hover { border-bottom: none; }
   width: $w;
   margin: {
     left: auto;
@@ -55,7 +56,6 @@
     }
   }
   .link {
-    a:hover { border-bottom: none; }
     width: 453px;
     float: left;
     padding-top: 30px;

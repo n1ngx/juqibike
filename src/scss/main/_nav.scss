@@ -1,0 +1,61 @@
+.nav {
+  background-color: $red;
+  a {
+    color: #fff;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+  .nav-box {
+    width: $w;
+    height: 40px;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 40px;
+    vertical-align: top;
+    h2 {
+      @include clearfix;
+      display: inline-block;
+      vertical-align: middle;
+      width: 240px;
+      padding: {
+        left: 17px;
+        right: 10px;
+      }
+      font-size: 14px;
+      i { 
+        float: right;
+        font-weight: normal;
+      }
+    }
+    .nav-ul {
+      @include clearfix;
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 15px;
+      font-weight: bold;
+      li {
+        float: left;
+        padding: {
+          left: 15px;
+          right: 15px;
+        }
+      }
+    }
+    .shop-car {
+      float: right;
+      padding-right: 30px;
+      a {
+        i {
+          display: inline-block;
+          vertical-align: -2px;
+          width: 21px;
+          height: 13px;
+          margin-right: 4px;
+          background-image: url('../img/icon-common.png');
+          background-position: -287px -53px;
+        }
+      }
+    }
+  }
+}
