@@ -224,6 +224,7 @@
       .menu .left-menu .list-item .big {
         position: absolute;
         top: 0;
+        z-index: 1;
         display: inline-block;
         display: none;
         width: 710px;
@@ -263,3 +264,96 @@
         border-color: #f34761; }
       .menu .left-menu .list-item:hover .big {
         display: block; }
+  .menu .right-menu {
+    float: left;
+    width: 960px;
+    line-height: 44px; }
+    .menu .right-menu .hot:before, .menu .right-menu .hot:after {
+      content: " ";
+      display: table; }
+    .menu .right-menu .hot:after {
+      clear: both; }
+    .menu .right-menu .hot h4 {
+      float: left;
+      padding-left: 20px; }
+    .menu .right-menu .hot .right {
+      float: right;
+      width: 210px; }
+      .menu .right-menu .hot .right img {
+        vertical-align: -2px; }
+      .menu .right-menu .hot .right a {
+        color: #c00; }
+    .menu .right-menu .banner {
+      float: left;
+      width: 700px;
+      padding-top: 10px;
+      padding-left: 10px; }
+      .menu .right-menu .banner .banner1 {
+        position: relative;
+        border: 1px solid #ddd; }
+        .menu .right-menu .banner .banner1 a, .menu .right-menu .banner .banner1 img {
+          display: block;
+          width: 100%;
+          height: 228px; }
+        .menu .right-menu .banner .banner1 a:hover {
+          border-bottom: none; }
+        .menu .right-menu .banner .banner1 ul {
+          height: 228px;
+          position: relative; }
+          .menu .right-menu .banner .banner1 ul li {
+            position: absolute;
+            top: 0;
+            display: none; }
+        .menu .right-menu .banner .banner1 .btn {
+          position: absolute;
+          right: 5px;
+          bottom: 5px; }
+          .menu .right-menu .banner .banner1 .btn a {
+            float: left;
+            width: 25px;
+            height: 10px;
+            margin-right: 5px;
+            background: #666; }
+      .menu .right-menu .banner .banner2 {
+        font-size: 0;
+        margin-top: 10px; }
+        .menu .right-menu .banner .banner2 i {
+          display: inline-block;
+          width: 21px;
+          height: 30px;
+          margin-top: 47px; }
+        .menu .right-menu .banner .banner2 a {
+          height: 125px;
+          vertical-align: middle;
+          display: inline-block; }
+          .menu .right-menu .banner .banner2 a:hover {
+            background: #f4f4f4;
+            border-bottom: none; }
+        .menu .right-menu .banner .banner2 .prev:hover i {
+          background-position-y: -150px; }
+        .menu .right-menu .banner .banner2 .prev i {
+          background: url("../img/icon_arrow.png") center -30px no-repeat; }
+        .menu .right-menu .banner .banner2 .next:hover i {
+          background-position-y: -120px; }
+        .menu .right-menu .banner .banner2 .next i {
+          background: url("../img/icon_arrow.png") center 0px no-repeat; }
+        .menu .right-menu .banner .banner2 .list {
+          overflow: hidden;
+          position: relative;
+          vertical-align: middle;
+          display: inline-block;
+          width: 658px;
+          height: 125px;
+          line-height: 0; }
+          .menu .right-menu .banner .banner2 .list .list-item {
+            position: absolute;
+            width: 628px;
+            padding-left: 15px;
+            padding-right: 15px; }
+            .menu .right-menu .banner .banner2 .list .list-item img {
+              padding: 1px; }
+    .menu .right-menu .information {
+      float: left;
+      width: 250px;
+      padding-top: 10px;
+      padding-left: 10px; }
