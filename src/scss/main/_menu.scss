@@ -240,26 +240,3 @@
     }
   }
 }
-.tab {
-  .tab-nav {
-    @include clearfix;
-    li {
-      float: left;
-      a {
-        display: block;
-        &:hover {
-          border-bottom: none;
-        }
-      }
-    }
-  }
-  .tab-content {
-    position: relative;
-    .tab-panel {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: none;
-    }
-  }
-}

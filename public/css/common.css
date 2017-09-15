@@ -15,10 +15,32 @@ ul {
 ul,
 li,
 input,
-h1, h2, h3, h4, h5, h5,
+h1, h2, h3, h4, h5, h5, h6, p,
 i {
   margin: 0;
   padding: 0; }
 
 i {
   font-style: normal; }
+
+.tab .tab-nav:before, .tab .tab-nav:after {
+  content: " ";
+  display: table; }
+
+.tab .tab-nav:after {
+  clear: both; }
+
+.tab .tab-nav li {
+  float: left; }
+  .tab .tab-nav li a {
+    display: block; }
+    .tab .tab-nav li a:hover {
+      border-bottom: none; }
+
+.tab .tab-content {
+  position: relative; }
+  .tab .tab-content .tab-panel {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none; }

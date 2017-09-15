@@ -1,4 +1,6 @@
 @import 'var';
+@import 'util';
+
 body {
   color: $main-color;
   font-size: $font12;
@@ -16,9 +18,33 @@ ul { list-style: none; }
 ul, 
 li, 
 input,
-h1, h2, h3, h4, h5, h5,
+h1, h2, h3, h4, h5, h5, h6, p,
 i {
   margin: 0;
   padding: 0;
 }
 i { font-style: normal; }
+
+.tab {
+  .tab-nav {
+    @include clearfix;
+    li {
+      float: left;
+      a {
+        display: block;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .tab-content {
+    position: relative;
+    .tab-panel {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+  }
+}
