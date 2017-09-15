@@ -1,0 +1,145 @@
+.stairs {
+  width: $w;
+  margin: 0 auto;
+  a:hover { border-bottom: none; }
+  .floor {
+    .floor-2 {
+      $color: #e2cca3;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+    .floor-title {
+      @include clearfix;
+      line-height: 39px;
+      border-bottom: 1px solid #9cd8e0;
+      background-color: #f4f4f4;
+      margin: {
+        top: 10px;
+        bottom: 10px;
+      }
+      h3 {
+        float: left;
+        width: 150px;
+        padding-left: 40px;
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #9cd8e0;
+      }
+      .tab-nav {
+        float: left;
+        li {
+          width: 106px;
+          line-height: 39px;
+          color: #444;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+          .active {
+            color: #fff;
+            background-color: #9cd8e0;
+          }
+        }
+      }
+      .other-link {
+        float: right;
+        li {
+          float: left;
+          a {
+            margin: 0 8px;
+            &:hover { color: $red; }
+          }
+        }
+      }
+    }
+    .floor-left {
+      float: left;
+      width: 240px;
+      .ad {
+        display: block;
+        img {
+          width: 238px;
+          height: 310px;
+          border: 1px solid $border-gray;
+        }
+      }
+      .question {
+        height: 144px;
+        margin-top: 10px;
+        border: 1px solid $border-gray;
+        li {
+          line-height: 29px;
+          padding: 0 10px;
+          font-size: 14px;
+          a {
+            &:hover {
+              color: $red;
+              text-decoration: underline;
+            }
+            img {
+              margin-right: 5px;
+              vertical-align: -4px;
+            }
+          }
+        }
+      }
+    }
+    .tab-content {
+      margin-left: 250px;
+      margin-right: 200px;
+      .tab-panel {
+        border-top: 1px solid $border-gray;
+        border-left: 1px solid $border-gray;
+        ul {
+          @include clearfix;
+        }
+        li {
+          float: left;
+          width: 166.25px;
+          padding: 10px;
+          text-align: center;
+          border-right: 1px solid $border-gray;
+          border-bottom: 1px solid $border-gray;
+        }
+        p {
+          line-height: 25px;
+          margin-top: 8.5px;
+        }
+        span {
+          font-size: 16px;
+          color: $red;
+        }
+        a:hover p { 
+          color: $red; 
+          text-decoration: underline;
+        }
+      }
+    }
+    .floor-right {
+      float: right;
+      width: 188px;
+      border: 1px solid $border-gray;
+      a {
+        display: block;
+        &:hover {
+          border-bottom: none;
+        }
+        img {
+          width: 188px;
+          height: 91px;
+        }
+      }
+    }
+  }
+}

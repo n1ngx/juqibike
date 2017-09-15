@@ -1,4 +1,5 @@
 .wrap {
+  @include clearfix;
   width: $w;
   margin: 10px auto 0;
   .w-left {

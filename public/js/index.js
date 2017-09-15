@@ -102,7 +102,7 @@ require(['js/config'], function () {
                     });
                     $(navs[i]).addClass('active');
                     panels.each(function (panelIndex, panelEl) {
-                        $(panelEl).fadeOut(200);
+                        $(panelEl).hide();
                     });
                     $(panels[i]).fadeIn(200);
                 }

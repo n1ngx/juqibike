@@ -384,6 +384,11 @@
 .wrap {
   width: 1200px;
   margin: 10px auto 0; }
+  .wrap:before, .wrap:after {
+    content: " ";
+    display: table; }
+  .wrap:after {
+    clear: both; }
   .wrap .w-left {
     width: 950px;
     float: left; }
@@ -541,3 +546,117 @@
         border: 1px solid #e6e6e6;
         width: 118px;
         height: 43.5px; }
+
+.stairs {
+  width: 1200px;
+  margin: 0 auto; }
+  .stairs a:hover {
+    border-bottom: none; }
+  .stairs .floor .floor-2 {
+    border-bottom-color: #e2cca3 !important; }
+    .stairs .floor .floor-2 h3 {
+      background-color: #e2cca3 !important; }
+    .stairs .floor .floor-2 .tab-nav li .active {
+      background-color: #e2cca3 !important; }
+  .stairs .floor .floor-title {
+    line-height: 39px;
+    border-bottom: 1px solid #9cd8e0;
+    background-color: #f4f4f4;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .stairs .floor .floor-title:before, .stairs .floor .floor-title:after {
+      content: " ";
+      display: table; }
+    .stairs .floor .floor-title:after {
+      clear: both; }
+    .stairs .floor .floor-title h3 {
+      float: left;
+      width: 150px;
+      padding-left: 40px;
+      margin-right: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #9cd8e0; }
+    .stairs .floor .floor-title .tab-nav {
+      float: left; }
+      .stairs .floor .floor-title .tab-nav li {
+        width: 106px;
+        line-height: 39px;
+        color: #444;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center; }
+        .stairs .floor .floor-title .tab-nav li .active {
+          color: #fff;
+          background-color: #9cd8e0; }
+    .stairs .floor .floor-title .other-link {
+      float: right; }
+      .stairs .floor .floor-title .other-link li {
+        float: left; }
+        .stairs .floor .floor-title .other-link li a {
+          margin: 0 8px; }
+          .stairs .floor .floor-title .other-link li a:hover {
+            color: #c00; }
+  .stairs .floor .floor-left {
+    float: left;
+    width: 240px; }
+    .stairs .floor .floor-left .ad {
+      display: block; }
+      .stairs .floor .floor-left .ad img {
+        width: 238px;
+        height: 310px;
+        border: 1px solid #e6e6e6; }
+    .stairs .floor .floor-left .question {
+      height: 144px;
+      margin-top: 10px;
+      border: 1px solid #e6e6e6; }
+      .stairs .floor .floor-left .question li {
+        line-height: 29px;
+        padding: 0 10px;
+        font-size: 14px; }
+        .stairs .floor .floor-left .question li a:hover {
+          color: #c00;
+          text-decoration: underline; }
+        .stairs .floor .floor-left .question li a img {
+          margin-right: 5px;
+          vertical-align: -4px; }
+  .stairs .floor .tab-content {
+    margin-left: 250px;
+    margin-right: 200px; }
+    .stairs .floor .tab-content .tab-panel {
+      border-top: 1px solid #e6e6e6;
+      border-left: 1px solid #e6e6e6; }
+      .stairs .floor .tab-content .tab-panel ul:before, .stairs .floor .tab-content .tab-panel ul:after {
+        content: " ";
+        display: table; }
+      .stairs .floor .tab-content .tab-panel ul:after {
+        clear: both; }
+      .stairs .floor .tab-content .tab-panel li {
+        float: left;
+        width: 166.25px;
+        padding: 10px;
+        text-align: center;
+        border-right: 1px solid #e6e6e6;
+        border-bottom: 1px solid #e6e6e6; }
+      .stairs .floor .tab-content .tab-panel p {
+        line-height: 25px;
+        margin-top: 8.5px; }
+      .stairs .floor .tab-content .tab-panel span {
+        font-size: 16px;
+        color: #c00; }
+      .stairs .floor .tab-content .tab-panel a:hover p {
+        color: #c00;
+        text-decoration: underline; }
+  .stairs .floor .floor-right {
+    float: right;
+    width: 188px;
+    border: 1px solid #e6e6e6; }
+    .stairs .floor .floor-right a {
+      display: block; }
+      .stairs .floor .floor-right a:hover {
+        border-bottom: none; }
+      .stairs .floor .floor-right a img {
+        width: 188px;
+        height: 91px; }

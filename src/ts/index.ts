@@ -104,7 +104,7 @@ require(['js/config'], () => {
           })
           $(navs[i]).addClass('active')
           panels.each((panelIndex, panelEl) => {
-            $(panelEl).fadeOut(200)
+            $(panelEl).hide()
           })
           $(panels[i]).fadeIn(200)
         }
