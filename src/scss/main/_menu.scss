@@ -201,9 +201,65 @@
     }
     .information {
       float: left;
-      width: 250px;
+      width: 240px;
       padding-top: 10px;
       padding-left: 10px;
+      .tab-nav {
+        a {
+          width: 120px;
+          line-height: 30px;
+          background-color: #f4f4f4;
+          text-align: center;
+        }
+        .active {
+          color: #fff;
+          background-color: $red;
+          font-weight: bold;
+        }
+      }
+      .tab-panel {
+        width: 230px;
+        padding: {
+          left: 10px;
+          top: 10px;
+        }
+        line-height: 25px;
+        li {
+          padding-left: 10px;
+          background: url('../img/icon01.png') no-repeat left center;
+        }
+        a {
+          vertical-align: middle;
+          display: inline-block;
+          &:hover {
+            border-bottom: none;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.tab {
+  .tab-nav {
+    @include clearfix;
+    li {
+      float: left;
+      a {
+        display: block;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .tab-content {
+    position: relative;
+    .tab-panel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
     }
   }
 }

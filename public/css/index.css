@@ -354,6 +354,51 @@
               padding: 1px; }
     .menu .right-menu .information {
       float: left;
-      width: 250px;
+      width: 240px;
       padding-top: 10px;
       padding-left: 10px; }
+      .menu .right-menu .information .tab-nav a {
+        width: 120px;
+        line-height: 30px;
+        background-color: #f4f4f4;
+        text-align: center; }
+      .menu .right-menu .information .tab-nav .active {
+        color: #fff;
+        background-color: #c00;
+        font-weight: bold; }
+      .menu .right-menu .information .tab-panel {
+        width: 230px;
+        padding-left: 10px;
+        padding-top: 10px;
+        line-height: 25px; }
+        .menu .right-menu .information .tab-panel li {
+          padding-left: 10px;
+          background: url("../img/icon01.png") no-repeat left center; }
+        .menu .right-menu .information .tab-panel a {
+          vertical-align: middle;
+          display: inline-block; }
+          .menu .right-menu .information .tab-panel a:hover {
+            border-bottom: none;
+            text-decoration: underline; }
+
+.tab .tab-nav:before, .tab .tab-nav:after {
+  content: " ";
+  display: table; }
+
+.tab .tab-nav:after {
+  clear: both; }
+
+.tab .tab-nav li {
+  float: left; }
+  .tab .tab-nav li a {
+    display: block; }
+    .tab .tab-nav li a:hover {
+      border-bottom: none; }
+
+.tab .tab-content {
+  position: relative; }
+  .tab .tab-content .tab-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }

@@ -5,7 +5,6 @@ require(['js/config'], function () {
         (function () {
             var banner1 = $('.banner1').find('li');
             var btn = $('.banner1').find('.btn').children();
-            log(banner1);
             var i = 0, paused = false;
             $(banner1[i]).fadeIn(500);
             $(btn[i]).css('background', '#f90');
@@ -32,7 +31,6 @@ require(['js/config'], function () {
                 paused = true;
             })
                 .on('mouseleave', function () {
-                log('out');
                 paused = false;
             });
         })();
@@ -40,7 +38,6 @@ require(['js/config'], function () {
             var banner2 = $('.banner2');
             var items = banner2.find('.list-item');
             var w = $(items[0]).parent().width();
-            log(w);
             items.each(function (i, el) {
                 $(el).css('left', i * w);
             });
@@ -53,7 +50,6 @@ require(['js/config'], function () {
                 i = (++i + items.length) % items.length;
             }
             var prevBtn = banner2.find('.prev'), nextBtn = banner2.find('.next');
-            log(prevBtn, nextBtn);
             prevBtn.click(function () {
                 // 节流
                 nowTime = new Date().getTime();
@@ -82,6 +78,34 @@ require(['js/config'], function () {
                 // 重启定时器
                 clearInterval(timer);
                 timer = setInterval(show, 3000);
+            });
+        })();
+        (function () {
+            // 取得所有的tab元素
+            var tabs = $('.tab');
+            // 对每一个tab做处理
+            tabs.each(function (tabIndex, tabEl) {
+                // 取得链接和内容
+                var navs = $(tabEl).find('.tab-nav').find('li a'), panels = $(tabEl).find('.tab-content').find('.tab-panel');
+                // 显示第一个
+                show(0);
+                // 对每个链接绑定事件
+                navs.each(function (navIndex, navEl) {
+                    $(navEl).on('click', function () {
+                        show(navIndex);
+                    });
+                });
+                // 显示第i个的函数
+                function show(i) {
+                    navs.each(function (i, el) {
+                        $(el).removeClass('active');
+                    });
+                    $(navs[i]).addClass('active');
+                    panels.each(function (panelIndex, panelEl) {
+                        $(panelEl).hide();
+                    });
+                    $(panels[i]).show();
+                }
             });
         })();
     });

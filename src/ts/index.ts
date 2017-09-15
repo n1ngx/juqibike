@@ -5,7 +5,6 @@ require(['js/config'], () => {
       let banner1 = $('.banner1').find('li')
       let btn = $('.banner1').find('.btn').children()
       
-      log(banner1)
       let i = 0, paused = false
       $(banner1[i]).fadeIn(500)
       $(btn[i]).css('background', '#f90')
@@ -31,7 +30,6 @@ require(['js/config'], () => {
         paused = true
       })
       .on('mouseleave', () => {
-        log('out')
         paused = false
       })
     })()
@@ -40,7 +38,6 @@ require(['js/config'], () => {
       let banner2 = $('.banner2')
       let items = banner2.find('.list-item')
       let w = $(items[0]).parent().width()
-      log(w)
       items.each((i, el) => {
         $(el).css('left', i * w)
       })
@@ -55,7 +52,6 @@ require(['js/config'], () => {
       }
       let prevBtn = banner2.find('.prev'),
           nextBtn = banner2.find('.next')
-          log(prevBtn, nextBtn)
       prevBtn.click(() => {
         // 节流
         nowTime = new Date().getTime()
@@ -82,6 +78,36 @@ require(['js/config'], () => {
         // 重启定时器
         clearInterval(timer)
         timer = setInterval(show, 3000)
+      })
+    })()
+    // tabs
+    ;(() => {
+      // 取得所有的tab元素
+      let tabs = $('.tab')
+      // 对每一个tab做处理
+      tabs.each((tabIndex, tabEl) => {
+        // 取得链接和内容
+        let navs = $(tabEl).find('.tab-nav').find('li a'),
+            panels = $(tabEl).find('.tab-content').find('.tab-panel')
+        // 显示第一个
+        show(0)
+        // 对每个链接绑定事件
+        navs.each((navIndex, navEl) => {
+          $(navEl).on('click', () => {
+            show(navIndex)
+          })
+        })
+        // 显示第i个的函数
+        function show(i: number) {
+          navs.each((i, el) => {
+            $(el).removeClass('active')
+          })
+          $(navs[i]).addClass('active')
+          panels.each((panelIndex, panelEl) => {
+            $(panelEl).hide()
+          })
+          $(panels[i]).show()
+        }
       })
     })()
   })
