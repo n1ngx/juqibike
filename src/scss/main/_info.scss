@@ -1,0 +1,122 @@
+.info {
+  @include clearfix;
+  width: $w;
+  margin: 10px auto;
+  .info-left {
+    float: left;
+    width: 240px;
+    .first {
+      @include clearfix;
+      padding: 10px 0;
+      margin: 0 10px;
+      border-bottom: 1px solid #dedede;
+      a:hover {
+        color: $red;
+        text-decoration: underline;
+        border-bottom: none;
+      }
+      img {
+        float: left;
+        width: 63px;
+        height: 63px;
+        border: 1px solid #dedede;
+        margin-right: 10px;
+      }
+      h4 {
+        color: $red;
+        line-height: 20px;
+      }
+      p {
+        padding: 5px 0;
+      }
+    }
+    ul {
+      padding-left: 10px;
+      li {
+        padding-left: 10px;
+        line-height: 24px;
+        background: url(../img/icon01.png) no-repeat left center;
+        a {
+          &:hover {
+            border-bottom: none;
+            text-decoration: underline;
+          }
+          &:hover span {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+  .info-right {
+    float: right;
+    width: 190px;
+    ul {
+      padding: 10px 0 0 10px;
+      li {
+        line-height: 24px;
+        a:hover {
+          border-bottom: none;
+          color: $red;
+        }
+      }
+    }
+  }
+  .info-center {
+    margin-left: 250px;
+    margin-right: 200px;
+    .content {
+      @include clearfix;
+      vertical-align: top;
+      a {
+        display: inline-block;
+        &:hover {
+          color: $red;
+          text-decoration: underline;
+          border-bottom: none;
+        }
+      }
+      img {
+        margin: 10px;
+      }
+      dl {
+        display: inline-block;
+        width: 256px;
+        margin: 10px;
+        vertical-align: top;
+        text-align: center;
+        h4 {
+          margin-top: 5px;
+          color: $red;
+          font-size: 14px;
+          line-height: 36px;
+        }
+        dd {
+          line-height: 21px;
+          padding-bottom: 20px;
+          border-bottom: 1px dashed #dedede;
+        }
+      }
+      ul {
+        margin: 10px;
+        display: inline-block;
+        vertical-align: top;
+        width: 214px;
+        li {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  .title {
+    padding-left: 10px;
+    line-height: 39px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid $red;
+  }
+  .content {
+    border: 1px solid #dedede;
+    border-top: none;
+    height: 231px;
+  }
+}
