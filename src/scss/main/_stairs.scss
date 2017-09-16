@@ -17,6 +17,76 @@
         }
       }
     }
+    .floor-3 {
+      $color: #acdec1;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+    .floor-4 {
+      $color: #d5b5e4;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+    .floor-5 {
+      $color: #f3b5b8;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+    .floor-6 {
+      $color: #e2cca3;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+    .floor-7 {
+      $color: #9cd8e0;
+      border-bottom-color: $color !important;
+      h3 {
+        background-color: $color !important;
+      }
+      .tab-nav {
+        li {
+          .active {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
     .floor-title {
       @include clearfix;
       line-height: 39px;

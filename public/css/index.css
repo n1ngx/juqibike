@@ -558,6 +558,36 @@
       background-color: #e2cca3 !important; }
     .stairs .floor .floor-2 .tab-nav li .active {
       background-color: #e2cca3 !important; }
+  .stairs .floor .floor-3 {
+    border-bottom-color: #acdec1 !important; }
+    .stairs .floor .floor-3 h3 {
+      background-color: #acdec1 !important; }
+    .stairs .floor .floor-3 .tab-nav li .active {
+      background-color: #acdec1 !important; }
+  .stairs .floor .floor-4 {
+    border-bottom-color: #d5b5e4 !important; }
+    .stairs .floor .floor-4 h3 {
+      background-color: #d5b5e4 !important; }
+    .stairs .floor .floor-4 .tab-nav li .active {
+      background-color: #d5b5e4 !important; }
+  .stairs .floor .floor-5 {
+    border-bottom-color: #f3b5b8 !important; }
+    .stairs .floor .floor-5 h3 {
+      background-color: #f3b5b8 !important; }
+    .stairs .floor .floor-5 .tab-nav li .active {
+      background-color: #f3b5b8 !important; }
+  .stairs .floor .floor-6 {
+    border-bottom-color: #e2cca3 !important; }
+    .stairs .floor .floor-6 h3 {
+      background-color: #e2cca3 !important; }
+    .stairs .floor .floor-6 .tab-nav li .active {
+      background-color: #e2cca3 !important; }
+  .stairs .floor .floor-7 {
+    border-bottom-color: #9cd8e0 !important; }
+    .stairs .floor .floor-7 h3 {
+      background-color: #9cd8e0 !important; }
+    .stairs .floor .floor-7 .tab-nav li .active {
+      background-color: #9cd8e0 !important; }
   .stairs .floor .floor-title {
     line-height: 39px;
     border-bottom: 1px solid #9cd8e0;
