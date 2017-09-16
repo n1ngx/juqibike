@@ -797,3 +797,93 @@
     border: 1px solid #dedede;
     border-top: none;
     height: 231px; }
+
+.foot {
+  background: url(../img/back_t.png) repeat-x center top; }
+  .foot a:hover {
+    border-bottom: none;
+    color: #c00;
+    text-decoration: underline; }
+  .foot .back-to-top {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: right;
+    background: url(../img/go_top_bg.png) no-repeat right bottom; }
+    .foot .back-to-top a {
+      display: inline-block;
+      width: 82px;
+      text-align: center; }
+  .foot .foot-link {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 22px; }
+    .foot .foot-link:before, .foot .foot-link:after {
+      content: " ";
+      display: table; }
+    .foot .foot-link:after {
+      clear: both; }
+    .foot .foot-link .link-block {
+      float: left;
+      width: 239px;
+      height: 160px;
+      border-right: 1px dashed #dedede; }
+      .foot .foot-link .link-block .title-bg {
+        width: 240px;
+        height: 40px;
+        background: url("../img/foot_img.jpg") no-repeat;
+        background-position: 0 0; }
+      .foot .foot-link .link-block li {
+        margin-left: 54px;
+        padding-left: 15px;
+        background: url("../img/icon02.png") no-repeat left center;
+        line-height: 28px; }
+  .foot .link-block-2 {
+    float: left;
+    width: 240px; }
+    .foot .link-block-2 h3 {
+      height: 36px;
+      line-height: 36px;
+      font-size: 24px;
+      color: #c00;
+      padding-left: 70px;
+      padding-top: 30px;
+      background: url(../img/phone_bg.png) no-repeat center top; }
+      .foot .link-block-2 h3 span {
+        font-size: 12px;
+        color: #444; }
+    .foot .link-block-2 div {
+      padding-left: 20px; }
+      .foot .link-block-2 div p {
+        color: #c00;
+        line-height: 35px; }
+      .foot .link-block-2 div a {
+        display: block;
+        text-align: center;
+        width: 100px;
+        line-height: 23px;
+        color: #fff;
+        background: url(../img/dy_btn1.png) no-repeat center center; }
+  .foot .friend-link {
+    width: 1200px;
+    margin: 35px auto 0;
+    border-top: 1px solid #dedede; }
+    .foot .friend-link h3 {
+      line-height: 50px;
+      color: #666; }
+    .foot .friend-link a {
+      margin-right: 20px;
+      line-height: 25px;
+      color: #949494; }
+  .foot .copyright {
+    background: url(../img/banquan_bg.png) repeat-x center top;
+    text-align: center; }
+    .foot .copyright ul {
+      margin: 20px;
+      line-height: 39px; }
+      .foot .copyright ul li {
+        display: inline-block; }
+        .foot .copyright ul li a {
+          margin: 0 10px; }
+    .foot .copyright p {
+      line-height: 25px; }

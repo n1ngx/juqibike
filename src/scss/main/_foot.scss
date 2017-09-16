@@ -1,0 +1,107 @@
+.foot {
+  background: url(../img/back_t.png) repeat-x center top;
+  a:hover {
+    border-bottom: none;
+    color: $red;
+    text-decoration: underline;
+  }
+  .back-to-top {
+    width: $w;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: right;
+    background: url(../img/go_top_bg.png) no-repeat right bottom;
+    a {
+      display: inline-block;
+      width: 82px;
+      text-align: center;
+    }
+  }
+  .foot-link {
+    @include clearfix;
+    width: $w;
+    margin: 0 auto;
+    padding-top: 22px;
+    .link-block {
+      float: left;
+      width: 239px;
+      height: 160px;
+      border-right: 1px dashed #dedede;
+      .title-bg {
+        width: 240px;
+        height: 40px;
+        background: url('../img/foot_img.jpg') no-repeat;
+        background-position: 0 0;
+      }
+      li {
+        margin-left: 54px;
+        padding-left: 15px;
+        background: url('../img/icon02.png') no-repeat  left center;
+        line-height: 28px;
+      }
+    }
+  }
+  .link-block-2 {
+    float: left;
+    width: 240px;
+    h3 {
+      height: 36px;
+      line-height: 36px;
+      font-size: 24px;
+      color: $red;
+      padding-left: 70px;
+      padding-top: 30px;
+      background: url(../img/phone_bg.png) no-repeat center top;
+      span {
+        font-size: 12px;
+        color: #444;
+      }
+    }
+    div {
+      padding-left: 20px;
+      p {
+        color: $red;
+        line-height: 35px;
+      }
+      a {
+        display: block;
+        text-align: center;
+        width: 100px;
+        line-height: 23px;
+        color: #fff;
+        background: url(../img/dy_btn1.png) no-repeat center center;
+      }
+    }
+  }
+  .friend-link {
+    width: $w;
+    margin: 35px auto 0;
+    border-top: 1px solid #dedede;
+    h3 {
+      line-height: 50px;
+      color: #666;
+    }
+    a {
+      margin-right: 20px;
+      line-height: 25px;
+      color: #949494;
+    }
+  }
+  .copyright {
+    background: url(../img/banquan_bg.png) repeat-x center top;
+    text-align: center;
+    ul {
+      margin: 20px;
+      line-height: 39px;
+      li {
+        display: inline-block;
+        a {
+          margin: 0 10px;
+        }
+      }
+    }
+    p {
+      line-height: 25px;
+    }
+  }
+}

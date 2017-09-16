@@ -108,6 +108,14 @@ require(['js/config'], function () {
                 }
             });
         })();
+        (function () {
+            $('.back-to-top a').click(function () {
+                log(this);
+                $('html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        })();
     });
 });
 //# sourceMappingURL=index.js.map

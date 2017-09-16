@@ -110,5 +110,14 @@ require(['js/config'], () => {
         }
       })
     })()
+    // back to top
+    ;(() => {
+      $('.back-to-top a').click(function(this: HTMLElement) {
+        log(this)
+        $('html').animate({
+          scrollTop: 0
+        }, 500)
+      })
+    })()
   })
 })
