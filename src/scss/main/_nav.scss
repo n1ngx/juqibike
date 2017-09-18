@@ -2,11 +2,9 @@
   background-color: $red;
   a {
     color: #fff;
-    &:hover {
-      border-bottom: none;
-    }
   }
   .nav-box {
+    position: relative;
     width: $w;
     height: 40px;
     margin: 0 auto;
@@ -27,6 +25,114 @@
         float: right;
         font-weight: normal;
       }
+      &:hover .left-menu{
+        display: block;
+      }
+      .left-menu {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        float: left;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 14px;
+        background: #fff;
+        a {
+          color: #444;
+        }
+        a:hover {
+          color: $red;
+        }
+        .menu-main {
+          border: {
+            left: 1px solid $red;
+            right: 1px solid $red;
+          }
+        }
+        .list-item {
+          width: 238px;
+          // height: 58px;
+          // background: #0ff;
+          // border-top: 1px solid #fff;
+          border-bottom: 1px dashed #dedede;
+          .small {
+            display: inline-block;
+            width: 100%;
+            h3 {
+              padding: {
+                left: 11px;
+              }
+              line-height: 30px;
+              background: url(../img/menu_icon.gif) no-repeat right center;
+            }
+            div {
+              margin: {
+                left: 8px;
+                right: 8px;
+              }
+              padding-left: 3px;
+              padding-bottom: 7.5px;
+            }
+          }
+          .big {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            display: inline-block;
+            display: none;
+            width: 710px;
+            height: 419px;
+            margin-left: 238px;
+            background: #fff4f4;;
+            .left {
+              float: left;
+              width: 443px;
+              padding: {
+                left: 32px;
+                right: 28px;
+              }
+              li {
+                line-height: 36px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px dashed #dedede;
+                a { color: $red; }
+                font: {
+                  size: 14px;
+                  weight: bold;
+                }
+              }
+            }
+            .right {
+              float: right;
+              width: 200px;
+              h4 {
+                color: $red;
+                padding-top: 4px;
+                line-height: 36px;
+              }
+              li {
+                float: left;
+                line-height: 21px;
+                width: 65px;
+              }
+            }
+          }
+          &:hover {
+            background: #fff4f4;
+            margin-top: -1px;
+            border: {
+              top: 1px solid;
+              bottom: 1px solid;
+            }
+            border-color: #f34761;
+          }
+          &:hover .big{
+            display: block;
+          }
+        }
+      }
     }
     .nav-ul {
       @include clearfix;
@@ -43,6 +149,7 @@
       }
     }
     .shop-car {
+      position: relative;
       float: right;
       padding-right: 30px;
       a {
@@ -54,6 +161,72 @@
           margin-right: 4px;
           background-image: url('../img/icon-common.png');
           background-position: -287px -53px;
+        }
+      }
+      &:hover {
+        .car {
+          display: block;
+        }
+      }
+      .car {
+        display: none;
+        a {
+          color: #444;
+        }
+        width: 327px;
+        border: 1px solid #dedede;
+        border-radius: 3px;
+        color: #444;
+        background: #F6F7FB;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 1;
+        .list {
+          li {
+            @include clearfix;
+            padding: 10px;
+            line-height: 60px;
+            background: #fff;
+            .img, .link, .price, .del {
+              float: left;
+            }
+            img {
+              display: block;
+              width: 60px;
+              height: 60px;
+            }
+            .link, .price, .del {
+              padding: 0 10px;
+            }
+            .link {
+              padding-top: 15px;
+              line-height: 14px;
+              width: 110px;
+            }
+          }
+        }
+        .pay {
+          @include clearfix;
+          padding: 10px;
+          .total {
+            float: left;
+            line-height: 20px;
+            .money {
+              font-weight: bold;
+            }
+            span {
+              color: $red;
+              padding: 0 10px;
+            }
+          }
+          .pay-btn {
+            cursor: pointer;
+            float: right;
+            width: 130px;
+            height: 38px;
+            background: url('../img/btn11.gif');
+          }
         }
       }
     }

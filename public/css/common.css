@@ -3,11 +3,11 @@ body {
   font-size: 12px; }
 
 a {
-  transition: color 0.5s;
+  transition: all 0.5s;
   color: #444;
   text-decoration: none; }
   a:hover {
-    border-bottom: 1px solid; }
+    color: #c00; }
 
 ul {
   list-style: none; }
@@ -34,8 +34,6 @@ i {
   float: left; }
   .tab .tab-nav li a {
     display: block; }
-    .tab .tab-nav li a:hover {
-      border-bottom: none; }
 
 .tab .tab-content {
   position: relative; }

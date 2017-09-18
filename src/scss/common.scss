@@ -6,12 +6,11 @@ body {
   font-size: $font12;
 }
 a {
-  transition: color 0.5s;
+  transition: all 0.5s;
   color: $main-color;
   text-decoration: none;
   &:hover {
-    // text-decoration: underline;
-    border-bottom: 1px solid;
+    color: $red;
   }
 }
 ul { list-style: none; }
@@ -32,9 +31,6 @@ i { font-style: normal; }
       float: left;
       a {
         display: block;
-        &:hover {
-          border-bottom: none;
-        }
       }
     }
   }

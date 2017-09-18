@@ -1,10 +1,9 @@
 @import 'util';
 @import 'var';
-@import 'main/top';
-@import 'main/head';
-@import 'main/nav';
-@import 'main/menu';
-@import 'main/wrap';
-@import 'main/stair';
-@import 'main/info';
-@import 'main/foot';
+// 头部和尾部
+@import 'frame';
+// 主页部分
+@import 'index/menu';
+@import 'index/wrap';
+@import 'index/stair';
+@import 'index/info';

@@ -1,11 +1,15 @@
 "use strict";
-require.config({
-    baseUrl: '/public/js',
-    paths: {
-        jquery: 'jquery-1.12.4.min',
-        Rx: 'Rx.min'
-    }
-});
+try {
+    require.config({
+        baseUrl: '/public/js',
+        paths: {
+            jquery: 'jquery-1.12.4.min',
+            Rx: 'Rx.min'
+        }
+    });
+}
+catch (e) {
+}
 var log = function () {
     var rest = [];
     for (var _i = 0; _i < arguments.length; _i++) {

@@ -1,0 +1,92 @@
+.detail {
+  min-height: 500px;
+  background: #eff0f0;
+  .detail-box {
+    @include clearfix;
+    width: $w;
+    margin: 0 auto;
+    .left, .center, .right {
+      margin-top: 10px;
+      float: left;
+      min-height: 300px;
+      background: #fff;
+    }
+    .left{
+      width: 300px;
+      margin-right: 10px;
+      .pic {
+        margin: 10px;
+        .small {
+          position: relative;
+          border: 1px solid $border-gray;
+        }
+        $small-img-w: 280px;
+        $box-w: 100px;
+        $b: $small-img-w / $box-w;
+        .box {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: $box-w;
+          height: $box-w;
+          background-color: #333;
+          opacity: 0.3;
+        }
+        .small-img {
+          display: block;
+          width: 100%;
+        }
+        .big {
+          position: absolute;
+          margin-left: $small-img-w + 20;
+          margin-top: -$small-img-w;
+          width: $small-img-w;
+          height: $small-img-w;
+          border: 1px solid $border-gray;
+          overflow: hidden;
+        }
+        .big-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: $small-img-w * $b;
+          z-index: 1;
+        }
+      }
+      .pic-list {
+        margin: 10px;
+        img {
+          width: 49px;
+          height: 49px;
+          border: 1px solid $border-gray;
+          &:hover {
+            border-color: $red;
+          }
+        }
+      }
+      .share {
+        @include clearfix;
+        margin: 10px;
+        .datu {
+          float: left;
+          padding-top: 2px;
+          padding-left: 17px;
+          background: url(../img/zoom_icon.png) no-repeat left center;
+          color: #69F;
+          text-decoration: underline;
+        }
+        .bshare-custom {
+          float: left;
+          margin-left: 10px;
+        }
+      }
+    }
+    .right {
+      width: 200px;
+    }
+    .center {
+      width: 680px;
+      margin-right: 10px;
+    }
+  }
+}

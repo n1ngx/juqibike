@@ -1,6 +1,5 @@
 .head {
   @include clearfix;
-  a:hover { border-bottom: none; }
   width: $w;
   margin: {
     left: auto;

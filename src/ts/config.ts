@@ -1,3 +1,4 @@
+try {
 require.config({
   baseUrl: '/public/js',
   paths: {
@@ -5,7 +6,8 @@ require.config({
     Rx: 'Rx.min'
   }
 })
-
+} catch(e) {
+}
 let log = function(...rest: any[]) {
   console.log(...rest)
 } 

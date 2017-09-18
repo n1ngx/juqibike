@@ -50,8 +50,6 @@
     display: table; }
   .head:after {
     clear: both; }
-  .head a:hover {
-    border-bottom: none; }
   .head .logo a {
     float: left; }
   .head .search {
@@ -140,9 +138,8 @@
   background-color: #c00; }
   .nav a {
     color: #fff; }
-    .nav a:hover {
-      border-bottom: none; }
   .nav .nav-box {
+    position: relative;
     width: 1200px;
     height: 40px;
     margin: 0 auto;
@@ -164,6 +161,83 @@
       .nav .nav-box h2 i {
         float: right;
         font-weight: normal; }
+      .nav .nav-box h2:hover .left-menu {
+        display: block; }
+      .nav .nav-box h2 .left-menu {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        float: left;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 14px;
+        background: #fff; }
+        .nav .nav-box h2 .left-menu a {
+          color: #444; }
+        .nav .nav-box h2 .left-menu a:hover {
+          color: #c00; }
+        .nav .nav-box h2 .left-menu .menu-main {
+          border-left: 1px solid #c00;
+          border-right: 1px solid #c00; }
+        .nav .nav-box h2 .left-menu .list-item {
+          width: 238px;
+          border-bottom: 1px dashed #dedede; }
+          .nav .nav-box h2 .left-menu .list-item .small {
+            display: inline-block;
+            width: 100%; }
+            .nav .nav-box h2 .left-menu .list-item .small h3 {
+              padding-left: 11px;
+              line-height: 30px;
+              background: url(../img/menu_icon.gif) no-repeat right center; }
+            .nav .nav-box h2 .left-menu .list-item .small div {
+              margin-left: 8px;
+              margin-right: 8px;
+              padding-left: 3px;
+              padding-bottom: 7.5px; }
+          .nav .nav-box h2 .left-menu .list-item .big {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            display: inline-block;
+            display: none;
+            width: 710px;
+            height: 419px;
+            margin-left: 238px;
+            background: #fff4f4; }
+            .nav .nav-box h2 .left-menu .list-item .big .left {
+              float: left;
+              width: 443px;
+              padding-left: 32px;
+              padding-right: 28px; }
+              .nav .nav-box h2 .left-menu .list-item .big .left li {
+                line-height: 36px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px dashed #dedede;
+                font-size: 14px;
+                font-weight: bold; }
+                .nav .nav-box h2 .left-menu .list-item .big .left li a {
+                  color: #c00; }
+            .nav .nav-box h2 .left-menu .list-item .big .right {
+              float: right;
+              width: 200px; }
+              .nav .nav-box h2 .left-menu .list-item .big .right h4 {
+                color: #c00;
+                padding-top: 4px;
+                line-height: 36px; }
+              .nav .nav-box h2 .left-menu .list-item .big .right li {
+                float: left;
+                line-height: 21px;
+                width: 65px; }
+          .nav .nav-box h2 .left-menu .list-item:hover {
+            background: #fff4f4;
+            margin-top: -1px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            border-color: #f34761; }
+          .nav .nav-box h2 .left-menu .list-item:hover .big {
+            display: block; }
     .nav .nav-box .nav-ul {
       display: inline-block;
       vertical-align: middle;
@@ -179,6 +253,7 @@
         padding-left: 15px;
         padding-right: 15px; }
     .nav .nav-box .shop-car {
+      position: relative;
       float: right;
       padding-right: 30px; }
       .nav .nav-box .shop-car a i {
@@ -189,6 +264,155 @@
         margin-right: 4px;
         background-image: url("../img/icon-common.png");
         background-position: -287px -53px; }
+      .nav .nav-box .shop-car:hover .car {
+        display: block; }
+      .nav .nav-box .shop-car .car {
+        display: none;
+        width: 327px;
+        border: 1px solid #dedede;
+        border-radius: 3px;
+        color: #444;
+        background: #F6F7FB;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 1; }
+        .nav .nav-box .shop-car .car a {
+          color: #444; }
+        .nav .nav-box .shop-car .car .list li {
+          padding: 10px;
+          line-height: 60px;
+          background: #fff; }
+          .nav .nav-box .shop-car .car .list li:before, .nav .nav-box .shop-car .car .list li:after {
+            content: " ";
+            display: table; }
+          .nav .nav-box .shop-car .car .list li:after {
+            clear: both; }
+          .nav .nav-box .shop-car .car .list li .img, .nav .nav-box .shop-car .car .list li .link, .nav .nav-box .shop-car .car .list li .price, .nav .nav-box .shop-car .car .list li .del {
+            float: left; }
+          .nav .nav-box .shop-car .car .list li img {
+            display: block;
+            width: 60px;
+            height: 60px; }
+          .nav .nav-box .shop-car .car .list li .link, .nav .nav-box .shop-car .car .list li .price, .nav .nav-box .shop-car .car .list li .del {
+            padding: 0 10px; }
+          .nav .nav-box .shop-car .car .list li .link {
+            padding-top: 15px;
+            line-height: 14px;
+            width: 110px; }
+        .nav .nav-box .shop-car .car .pay {
+          padding: 10px; }
+          .nav .nav-box .shop-car .car .pay:before, .nav .nav-box .shop-car .car .pay:after {
+            content: " ";
+            display: table; }
+          .nav .nav-box .shop-car .car .pay:after {
+            clear: both; }
+          .nav .nav-box .shop-car .car .pay .total {
+            float: left;
+            line-height: 20px; }
+            .nav .nav-box .shop-car .car .pay .total .money {
+              font-weight: bold; }
+            .nav .nav-box .shop-car .car .pay .total span {
+              color: #c00;
+              padding: 0 10px; }
+          .nav .nav-box .shop-car .car .pay .pay-btn {
+            cursor: pointer;
+            float: right;
+            width: 130px;
+            height: 38px;
+            background: url("../img/btn11.gif"); }
+
+.foot {
+  background: url(../img/back_t.png) repeat-x center top; }
+  .foot a:hover {
+    color: #c00;
+    text-decoration: underline; }
+  .foot .back-to-top {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: right;
+    background: url(../img/go_top_bg.png) no-repeat right bottom; }
+    .foot .back-to-top a {
+      display: inline-block;
+      width: 82px;
+      text-align: center; }
+  .foot .foot-link {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 22px; }
+    .foot .foot-link:before, .foot .foot-link:after {
+      content: " ";
+      display: table; }
+    .foot .foot-link:after {
+      clear: both; }
+    .foot .foot-link .link-block {
+      float: left;
+      width: 239px;
+      height: 160px;
+      border-right: 1px dashed #dedede; }
+      .foot .foot-link .link-block .title-bg {
+        width: 240px;
+        height: 40px;
+        background: url("../img/foot_img.jpg") no-repeat;
+        background-position: 0 0; }
+      .foot .foot-link .link-block li {
+        margin-left: 54px;
+        padding-left: 15px;
+        background: url("../img/icon02.png") no-repeat left center;
+        line-height: 28px; }
+  .foot .link-block-2 {
+    float: left;
+    width: 240px; }
+    .foot .link-block-2 h3 {
+      height: 36px;
+      line-height: 36px;
+      font-size: 24px;
+      color: #c00;
+      padding-left: 70px;
+      padding-top: 30px;
+      background: url(../img/phone_bg.png) no-repeat center top; }
+      .foot .link-block-2 h3 span {
+        font-size: 12px;
+        color: #444; }
+    .foot .link-block-2 div {
+      padding-left: 20px; }
+      .foot .link-block-2 div p {
+        color: #c00;
+        line-height: 35px; }
+      .foot .link-block-2 div a {
+        display: block;
+        text-align: center;
+        width: 100px;
+        line-height: 23px;
+        color: #fff;
+        background: url(../img/dy_btn1.png) no-repeat center center; }
+  .foot .friend-link {
+    width: 1200px;
+    margin: 35px auto 0;
+    border-top: 1px solid #dedede; }
+    .foot .friend-link h3 {
+      line-height: 50px;
+      color: #666; }
+    .foot .friend-link a {
+      margin-right: 20px;
+      line-height: 25px;
+      color: #949494; }
+  .foot .copyright {
+    background: url(../img/banquan_bg.png) repeat-x center top;
+    text-align: center; }
+    .foot .copyright ul {
+      margin: 20px;
+      line-height: 39px; }
+      .foot .copyright ul li {
+        display: inline-block; }
+        .foot .copyright ul li a {
+          margin: 0 10px; }
+    .foot .copyright p {
+      line-height: 25px; }
+
+.nav .nav-box h2 .left-menu {
+  display: block; }
 
 .menu {
   width: 1200px;
@@ -198,75 +422,10 @@
     display: table; }
   .menu:after {
     clear: both; }
-  .menu .left-menu {
-    position: relative;
-    float: left; }
-    .menu .left-menu a:hover {
-      color: #c00; }
-    .menu .left-menu .menu-main {
-      border-left: 1px solid #c00;
-      border-right: 1px solid #c00; }
-    .menu .left-menu .list-item {
-      width: 238px;
-      border-bottom: 1px dashed #dedede; }
-      .menu .left-menu .list-item .small {
-        display: inline-block;
-        width: 100%; }
-        .menu .left-menu .list-item .small h3 {
-          padding-left: 11px;
-          line-height: 30px;
-          background: url(../img/menu_icon.gif) no-repeat right center; }
-        .menu .left-menu .list-item .small div {
-          margin-left: 8px;
-          margin-right: 8px;
-          padding-left: 3px;
-          padding-bottom: 7.5px; }
-      .menu .left-menu .list-item .big {
-        position: absolute;
-        top: 0;
-        z-index: 1;
-        display: inline-block;
-        display: none;
-        width: 710px;
-        height: 419px;
-        margin-left: 238px;
-        background: #fff4f4; }
-        .menu .left-menu .list-item .big .left {
-          float: left;
-          width: 443px;
-          padding-left: 32px;
-          padding-right: 28px; }
-          .menu .left-menu .list-item .big .left li {
-            line-height: 36px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed #dedede;
-            font-size: 14px;
-            font-weight: bold; }
-            .menu .left-menu .list-item .big .left li a {
-              color: #c00; }
-        .menu .left-menu .list-item .big .right {
-          float: right;
-          width: 200px; }
-          .menu .left-menu .list-item .big .right h4 {
-            color: #c00;
-            padding-top: 4px;
-            line-height: 36px; }
-          .menu .left-menu .list-item .big .right li {
-            float: left;
-            line-height: 21px;
-            width: 65px; }
-      .menu .left-menu .list-item:hover {
-        background: #fff4f4;
-        margin-top: -1px;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        border-color: #f34761; }
-      .menu .left-menu .list-item:hover .big {
-        display: block; }
   .menu .right-menu {
     float: left;
     width: 960px;
+    margin-left: 240px;
     line-height: 44px; }
     .menu .right-menu .hot:before, .menu .right-menu .hot:after {
       content: " ";
@@ -295,8 +454,6 @@
           display: block;
           width: 100%;
           height: 228px; }
-        .menu .right-menu .banner .banner1 a:hover {
-          border-bottom: none; }
         .menu .right-menu .banner .banner1 ul {
           height: 228px;
           position: relative; }
@@ -378,7 +535,6 @@
           vertical-align: middle;
           display: inline-block; }
           .menu .right-menu .information .tab-panel a:hover {
-            border-bottom: none;
             text-decoration: underline; }
 
 .wrap {
@@ -425,8 +581,6 @@
       border-bottom: 1px solid #e6e6e6; }
       .wrap .w-left .tab-panel ul li a {
         display: block; }
-        .wrap .w-left .tab-panel ul li a:hover {
-          border-bottom: none; }
         .wrap .w-left .tab-panel ul li a h3 {
           transition: all 0.5s; }
         .wrap .w-left .tab-panel ul li a:hover h3 {
@@ -495,7 +649,6 @@
         padding-right: 10px;
         float: right; }
         .wrap .w-right .title a:hover {
-          border-bottom: none;
           color: #c00;
           text-decoration: underline; }
     .wrap .w-right .content a {
@@ -550,8 +703,6 @@
 .stair {
   width: 1200px;
   margin: 0 auto; }
-  .stair a:hover {
-    border-bottom: none; }
   .stair .floor .floor-2 {
     border-bottom-color: #e2cca3 !important; }
     .stair .floor .floor-2 h3 {
@@ -714,8 +865,7 @@
         clear: both; }
       .info .info-left .first a:hover {
         color: #c00;
-        text-decoration: underline;
-        border-bottom: none; }
+        text-decoration: underline; }
       .info .info-left .first img {
         float: left;
         width: 63px;
@@ -734,7 +884,6 @@
         line-height: 24px;
         background: url(../img/icon01.png) no-repeat left center; }
         .info .info-left ul li a:hover {
-          border-bottom: none;
           text-decoration: underline; }
         .info .info-left ul li a:hover span {
           color: #c00; }
@@ -746,7 +895,6 @@
       .info .info-right ul li {
         line-height: 24px; }
         .info .info-right ul li a:hover {
-          border-bottom: none;
           color: #c00; }
   .info .info-center {
     margin-left: 250px;
@@ -762,8 +910,7 @@
         display: inline-block; }
         .info .info-center .content a:hover {
           color: #c00;
-          text-decoration: underline;
-          border-bottom: none; }
+          text-decoration: underline; }
       .info .info-center .content img {
         margin: 10px; }
       .info .info-center .content dl {
@@ -797,93 +944,3 @@
     border: 1px solid #dedede;
     border-top: none;
     height: 231px; }
-
-.foot {
-  background: url(../img/back_t.png) repeat-x center top; }
-  .foot a:hover {
-    border-bottom: none;
-    color: #c00;
-    text-decoration: underline; }
-  .foot .back-to-top {
-    width: 1200px;
-    margin: 0 auto;
-    line-height: 26px;
-    text-align: right;
-    background: url(../img/go_top_bg.png) no-repeat right bottom; }
-    .foot .back-to-top a {
-      display: inline-block;
-      width: 82px;
-      text-align: center; }
-  .foot .foot-link {
-    width: 1200px;
-    margin: 0 auto;
-    padding-top: 22px; }
-    .foot .foot-link:before, .foot .foot-link:after {
-      content: " ";
-      display: table; }
-    .foot .foot-link:after {
-      clear: both; }
-    .foot .foot-link .link-block {
-      float: left;
-      width: 239px;
-      height: 160px;
-      border-right: 1px dashed #dedede; }
-      .foot .foot-link .link-block .title-bg {
-        width: 240px;
-        height: 40px;
-        background: url("../img/foot_img.jpg") no-repeat;
-        background-position: 0 0; }
-      .foot .foot-link .link-block li {
-        margin-left: 54px;
-        padding-left: 15px;
-        background: url("../img/icon02.png") no-repeat left center;
-        line-height: 28px; }
-  .foot .link-block-2 {
-    float: left;
-    width: 240px; }
-    .foot .link-block-2 h3 {
-      height: 36px;
-      line-height: 36px;
-      font-size: 24px;
-      color: #c00;
-      padding-left: 70px;
-      padding-top: 30px;
-      background: url(../img/phone_bg.png) no-repeat center top; }
-      .foot .link-block-2 h3 span {
-        font-size: 12px;
-        color: #444; }
-    .foot .link-block-2 div {
-      padding-left: 20px; }
-      .foot .link-block-2 div p {
-        color: #c00;
-        line-height: 35px; }
-      .foot .link-block-2 div a {
-        display: block;
-        text-align: center;
-        width: 100px;
-        line-height: 23px;
-        color: #fff;
-        background: url(../img/dy_btn1.png) no-repeat center center; }
-  .foot .friend-link {
-    width: 1200px;
-    margin: 35px auto 0;
-    border-top: 1px solid #dedede; }
-    .foot .friend-link h3 {
-      line-height: 50px;
-      color: #666; }
-    .foot .friend-link a {
-      margin-right: 20px;
-      line-height: 25px;
-      color: #949494; }
-  .foot .copyright {
-    background: url(../img/banquan_bg.png) repeat-x center top;
-    text-align: center; }
-    .foot .copyright ul {
-      margin: 20px;
-      line-height: 39px; }
-      .foot .copyright ul li {
-        display: inline-block; }
-        .foot .copyright ul li a {
-          margin: 0 10px; }
-    .foot .copyright p {
-      line-height: 25px; }

@@ -1,0 +1,15 @@
+.position {
+  @include clearfix;
+  line-height: 44px;
+  .label {
+    float: left;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  ul {
+    float: left;
+    li {
+      float: left;
+    }
+  }
+}
