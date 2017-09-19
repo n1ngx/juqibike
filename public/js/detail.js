@@ -2,8 +2,7 @@
 require(['js/config'], function () {
     require([
         'common',
-        'util/banner1',
-        'util/banner2',
+        'util/fangdajing',
     ]);
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=detail.js.map

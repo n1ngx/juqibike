@@ -17,5 +17,4 @@ var log = function () {
     }
     console.log.apply(console, rest);
 };
-log('hello');
 //# sourceMappingURL=config.js.map
