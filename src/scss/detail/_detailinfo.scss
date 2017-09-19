@@ -1,0 +1,157 @@
+.detail-info {
+  @include clearfix;
+  width: $w;
+  margin: 0 auto;
+  padding: 10px 0;
+  background: #fff;
+  .sub-left {
+    float: left;
+    width: 240px;
+    .rel-link {
+      padding: 10px;
+      background: #ffe6e6;
+      border: 1px solid #ff8b8b;
+      h3 {
+        padding: 10px 0 20px;
+        color: #d90d0d;
+        text-align: center;
+        background: #ffe6e6;
+      }
+      .cont {
+        a {
+          display: block;
+        }
+        padding: 10px;
+        background: #fff;
+        h4 {
+          line-height: 36px;
+        }
+        ul {
+          @include clearfix;
+          li {
+            float: left;
+            width: 80px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .ad {
+      a {
+        display: block;
+      }
+      img {
+        display: block;
+        width: 240px;
+        margin: 10px 0;
+      }
+    }
+  }
+  .sub-right {
+    float: left;
+    width: 950px;
+    margin-left: 10px;
+    .tab {
+      .tab-nav {
+        width: 100%;
+        border-bottom: 3px solid $red;
+        a {
+          display: block;
+          width: 110px;
+          margin-right: 10px;
+          background: url(../img/details_tabt.png) no-repeat center bottom;        
+          font-size: 14px;
+          line-height: 31px;
+          text-align: center;
+        }
+        .active {
+          color: #fff;
+          font-weight: bold;
+          background: url(../img/details_tabt_hover.png) no-repeat center bottom;
+        }
+      }
+      .tab-panel {
+        border: 5px solid $border-gray;
+        padding: 20px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .comment {
+      padding: 10px 0;
+      .comment-title {
+        @include clearfix;
+        padding: 0 10px;
+        line-height: 38px;
+        background: url(../img/wpl_h3_bg.png);
+        h4 {
+          float: left;
+        }
+        p {
+          float: right;
+          span {
+            color: $red;
+          }
+        }
+      }
+      .comment-cont {
+        @include clearfix;
+        padding: 10px;
+        .pagination {
+          float: right;
+        }
+        .comment-no {
+          padding: 20px;
+          text-align: center;
+        }
+      }
+      .comment-box {
+        h4 {
+          padding: 0 10px;
+          line-height: 38px;
+          background: url(../img/wpl_h3_bg.png);
+        }
+        .comment-form {
+          border: 1px solid $border-gray;
+          border-top: none;
+          line-height: 40px;
+          padding: 10px;
+          label {
+            display: block;
+            span {
+              display: inline-block;
+              width: 100px;
+              text-align: right;
+              font-size: 14px;
+              font-weight: bold;
+            }
+            p {
+              display: inline-block;
+            }
+            input {
+              line-height: 28px;
+              border: 1px solid #e5e5e5;
+            }
+            textarea {
+              height: 92px;
+              border: 1px solid #ddd;
+              background: url(../img/liuyan_input_bg.png) repeat-x center top;
+              width: 442px;
+              vertical-align: bottom;
+            }
+          }
+          .submit {
+            border: none; 
+            background: url(../img/liji_btn.png);
+            width: 83px;
+            height: 27px;
+            margin-left: 100px;
+            margin-top: 15px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

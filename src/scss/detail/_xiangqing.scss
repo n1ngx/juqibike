@@ -1,5 +1,4 @@
 .detail {
-  min-height: 500px;
   background: #eff0f0;
   .detail-box {
     @include clearfix;
@@ -9,11 +8,11 @@
       margin-top: 10px;
       float: left;
       min-height: 300px;
-      background: #fff;
     }
     .left{
       width: 300px;
       margin-right: 10px;
+      background: #fff;
       .pic {
         margin: 10px;
         .small {
@@ -24,6 +23,7 @@
         $box-w: 100px;
         $b: $small-img-w / $box-w;
         .box {
+          display: none;
           position: absolute;
           left: 0;
           top: 0;
@@ -38,6 +38,7 @@
         }
         .big {
           position: absolute;
+          display: none;
           margin-left: $small-img-w + 20;
           margin-top: -$small-img-w;
           width: $small-img-w;
@@ -83,10 +84,174 @@
     }
     .right {
       width: 200px;
+      text-align: center;
+      .brand {
+        padding: 10px;
+        background: #fff;
+        a {
+          display: block;
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .like {
+        text-align: left;
+        margin: 10px 0;
+        padding: 10px;
+        background: #fff;
+        h4 {
+          padding: 10px 0;
+        }
+        .good-like {
+          margin: 10px 0;
+          @include clearfix;
+          li {
+            float: left;
+            width: 80px;
+            text-align: center;
+            padding: 0 5px;
+            img {
+              width: 80px;
+              height: 80px;
+            }
+            p {
+              padding: 10px 5px;
+            }
+            span {
+              padding: 10px 0;
+              color: $red;
+              font-weight: bold;
+            }
+          }
+        }
+        .service {
+          @include clearfix;
+          li {
+            float: left;
+            width: 60px;
+            text-align: center;
+          }
+          .bg {
+            display: inline-block;
+            width: 39px;
+            height: 27px;
+            background: url("../img/nrzsy_14.png") no-repeat;
+          }
+        }
+      }
     }
     .center {
       width: 680px;
       margin-right: 10px;
+      .title {
+        background: #fff;
+        padding: 10px;
+      }
+      .cont {
+        @include clearfix;
+        margin: 10px 0;
+        padding: 10px;
+        line-height: 36px;
+        background: #fff;
+        .block {
+          @include clearfix;
+          .block-left {
+            width: 280px;
+            float: left;
+            
+          }
+          .block-right {
+            float: left;
+          }
+        }
+        $gray: #999;
+        .price {
+          border-bottom: 1px dashed $border-gray;
+          .now-val {
+            font-size: 27px;
+            color: $red;
+          }
+          .prev-val {
+            color: $gray;
+            text-decoration: line-through;
+          }
+          .id-val {
+            color: $gray;
+          }
+        }
+        .info {
+          border-bottom: 1px dashed $border-gray;
+          .brand-val {
+            color: $red;
+          }
+          .weight-val {
+            color: $gray;
+          }
+        }
+        .many {
+          .many-val {
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+            vertical-align: -5px;
+            background: url(../img/stock.png) no-repeat 0px 0px;
+          }
+        }
+        .month-sale, .star {
+          color: #f60;
+        }
+        .star {
+          img {
+            vertical-align: -1px;
+          }
+        }
+      }
+      .sort {
+        .color {
+          .select {
+            display: inline-block;
+            label {
+              padding: 0 10px;
+            }
+            input {
+              vertical-align: -2px;
+            }
+          }
+        }
+        .num {
+          vertical-align: middle;
+          .num-val {
+            a {
+              display: inline-block;
+              text-align: center;
+              width: 18px;
+              line-height: 18px;
+              background: url(../img/jia_jian_icon.png) no-repeat center center;
+            }
+            display: inline-block;
+            vertical-align: middle;
+            input {
+              width: 52px;
+              line-height: 25px;
+              border: 1px solid gray;
+              border-radius: 3px;
+              text-align: center;
+            }
+          }
+          .tp-val {
+            font-size: 16px;
+            font-weight: bold;
+            color: $red;
+          }
+        }
+      }
+      .add-to-shopcar {
+        a {
+          display: inline-block;
+          margin-top: 25px;
+        }
+      }
     }
   }
 }
