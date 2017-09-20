@@ -73,7 +73,7 @@ require(['js/config'], () => {
     })
     // Rx做实时判断用户名是否存在
     let rxInput = Rx.Observable.fromEvent($('#form-account')[0], 'input')
-    rxInput.debounceTime(500).map((e: KeyboardEvent) => {
+    rxInput.debounceTime(100).map((e: KeyboardEvent) => {
       getUserName()
     }).subscribe()
     function getUserName() {
@@ -109,8 +109,8 @@ require(['js/config'], () => {
         }
       }
       $.ajax({
-        url,
         method: 'post',
+        url,
         data: {
           name: $('#form-account').val(),
           pwd: $('#form-pwd').val(),

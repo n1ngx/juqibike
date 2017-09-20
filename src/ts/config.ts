@@ -4,6 +4,7 @@ try {
     paths: {
       jquery: 'jquery-1.12.4.min',
       Rx: 'Rx.min',
+      'jquery-ui': 'jquery-ui.min'
     }
   })
 } catch (e) {
