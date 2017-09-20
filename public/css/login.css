@@ -10,7 +10,10 @@
     .login-header .header-box:after {
       clear: both; }
   .login-header .logo {
-    float: left; }
+    float: left;
+    font-size: 0; }
+    .login-header .logo a {
+      display: inline-block; }
     .login-header .logo img {
       height: 100px; }
     .login-header .logo h2 {
@@ -28,7 +31,7 @@
 .login-body {
   background: url(../img/login-bg.jpg) no-repeat center center;
   margin: -10px auto 0;
-  padding: 50px; }
+  padding: 50px 0; }
   .login-body .login-wrap {
     width: 1200px;
     margin: 0 auto; }
@@ -122,10 +125,12 @@
   text-align: center;
   border-top: solid 1px #e6e6e6;
   color: #999;
-  padding-bottom: 30px; }
+  padding-bottom: 10px; }
   .login-footer .links {
     padding-top: 30px;
     padding-bottom: 15px; }
   .login-footer a {
     color: #999;
     margin: 0 10px; }
+  .login-footer .copyright {
+    line-height: 25px; }

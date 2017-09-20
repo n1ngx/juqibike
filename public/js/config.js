@@ -17,4 +17,20 @@ var log = function () {
     }
     console.log.apply(console, rest);
 };
+var now = 'dev', root = '';
+function switchEnv(e) {
+    switch (e) {
+        case 'dev': {
+            root = 'http://localhost:5555/';
+            break;
+        }
+        case 'prod': {
+            root = '/';
+            break;
+        }
+    }
+}
+switchEnv(now);
+log(root);
+var rootUrl = '/public/';
 //# sourceMappingURL=config.js.map

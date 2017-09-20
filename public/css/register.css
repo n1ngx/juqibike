@@ -10,7 +10,10 @@
     .register-header .header-box:after {
       clear: both; }
   .register-header .logo {
-    float: left; }
+    float: left;
+    font-size: 0; }
+    .register-header .logo a {
+      display: inline-block; }
     .register-header .logo img {
       height: 100px; }
     .register-header .logo h2 {
@@ -96,10 +99,12 @@
   text-align: center;
   border-top: solid 1px #e6e6e6;
   color: #999;
-  padding-bottom: 30px; }
+  padding-bottom: 10px; }
   .register-footer .links {
     padding-top: 30px;
     padding-bottom: 15px; }
   .register-footer a {
     color: #999;
     margin: 0 10px; }
+  .register-footer .copyright {
+    line-height: 25px; }

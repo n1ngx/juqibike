@@ -9,6 +9,10 @@
   }
   .logo {
     float: left;
+    font-size: 0;
+    a {
+      display: inline-block;
+    }
     img {
       height: 100px;
     }
@@ -31,7 +35,7 @@
 .login-body {
   background: url(../img/login-bg.jpg) no-repeat center center;
   margin: -10px auto 0;
-  padding: 50px;
+  padding: 50px 0;
   .login-wrap {
     @include clearfix;
     width: $w;
@@ -130,7 +134,7 @@ $placeholder-color: #ccc;
   text-align: center;
   border-top: solid 1px #e6e6e6;
   color: #999;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   .links {
     padding-top: 30px;
     padding-bottom: 15px;
@@ -138,5 +142,8 @@ $placeholder-color: #ccc;
   a {
     color: #999;
     margin: 0 10px;
+  }
+  .copyright {
+    line-height: 25px;
   }
 }

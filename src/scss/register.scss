@@ -9,6 +9,10 @@
   }
   .logo {
     float: left;
+    font-size: 0;
+    a {
+      display: inline-block;
+    }
     img {
       height: 100px;
     }
@@ -102,7 +106,7 @@ $placeholder-color: #ccc;
   text-align: center;
   border-top: solid 1px #e6e6e6;
   color: #999;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   .links {
     padding-top: 30px;
     padding-bottom: 15px;
@@ -110,5 +114,8 @@ $placeholder-color: #ccc;
   a {
     color: #999;
     margin: 0 10px;
+  }
+  .copyright {
+    line-height: 25px;
   }
 }

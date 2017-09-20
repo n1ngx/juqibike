@@ -1,5 +1,5 @@
 require(['js/config'], () => {
-  require(['jquery'], () => {
+  require(['jquery', 'Rx'], (jq: any, Rx: any) => {
     interface Result {
       name: string,
       isOK: boolean,
@@ -24,7 +24,7 @@ require(['js/config'], () => {
       [index: string]: Function
     }
     let s: S = {
-      'form-account': (str: string) => /^[a-zA-Z0-9_-]{4,20}$/.test(str),
+      'form-account': (str: string) => /^[\u4e00-\u9fa5A-Za-z0-9-_]{2,20}$/.test(str),
       'form-pwd': (str: string) => /^\w{6,20}$/.test(str),
       'form-equalTopwd': (str: string) => str.length >= 6 && items.find('#form-pwd').val() === str,
       'form-email': (str: string) => /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(str)
@@ -65,14 +65,42 @@ require(['js/config'], () => {
           $(el).removeClass('inputting')
           // 验证
           valide()
+          getUserName()
         })
         .on('input', () => {
           valide()
         })
     })
-
+    // Rx做实时判断用户名是否存在
+    let rxInput = Rx.Observable.fromEvent($('#form-account')[0], 'input')
+    rxInput.debounceTime(500).map((e: KeyboardEvent) => {
+      getUserName()
+    }).subscribe()
+    function getUserName() {
+      let el = $('#form-account')[0] as HTMLInputElement
+      $.ajax({
+        method: 'get',
+        url: root + 'register',
+        data: {
+          username: el.value
+        },
+        success: (res) => {
+          if (res.isRepeat) {
+            $(items[0])
+              .removeClass('inputting sucess error')
+              .addClass('error')
+            result[0].isOK = false
+            result[0].msg = `${result[0].name}${el.value}已存在！`
+            $(tips[0]).text(result[0].msg)
+            $(tips[0]).css('color', '#c00')
+          }
+        }
+      })
+    }
     let subBtn = $('.btn-register')
-    subBtn.click(function(e: JQueryEventObject) {
+    subBtn.click(function (e: JQueryEventObject) {
+      let url = root + 'register'
+  
       e.preventDefault()
       for (let x of result) {
         if (!x.isOK) {
@@ -80,7 +108,29 @@ require(['js/config'], () => {
           return
         }
       }
-      alert('注册成功')
+      $.ajax({
+        url,
+        method: 'post',
+        data: {
+          name: $('#form-account').val(),
+          pwd: $('#form-pwd').val(),
+          email: $('#form-email').val()
+        },
+        success: (res) => {
+          switch(res.status) {
+            case 'success': {
+              alert('注册成功！')
+              $(window).attr('location', rootUrl + 'login.html')
+              break
+            }
+            case 'error': {
+              alert('注册失败！')
+              ;($('.register-form')[0] as HTMLFormElement).reset()
+              break
+            }
+          }
+        }
+      })
     })
   })
 })

@@ -1,6 +1,6 @@
 "use strict";
 require(['js/config'], function () {
-    require(['jquery'], function () {
+    require(['jquery', 'Rx'], function (jq, Rx) {
         var form = $(".register-form"), items = form.find('.form-item'), tips = form.find('.input-tip');
         var result = [];
         // 初始化验证是否通过数组
@@ -15,7 +15,7 @@ require(['js/config'], function () {
             });
         }
         var s = {
-            'form-account': function (str) { return /^[a-zA-Z0-9_-]{4,20}$/.test(str); },
+            'form-account': function (str) { return /^[\u4e00-\u9fa5A-Za-z0-9-_]{2,20}$/.test(str); },
             'form-pwd': function (str) { return /^\w{6,20}$/.test(str); },
             'form-equalTopwd': function (str) { return str.length >= 6 && items.find('#form-pwd').val() === str; },
             'form-email': function (str) { return /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(str); }
@@ -58,13 +58,41 @@ require(['js/config'], function () {
                 $(el).removeClass('inputting');
                 // 验证
                 valide();
+                getUserName();
             })
                 .on('input', function () {
                 valide();
             });
         });
+        // Rx做实时判断用户名是否存在
+        var rxInput = Rx.Observable.fromEvent($('#form-account')[0], 'input');
+        rxInput.debounceTime(500).map(function (e) {
+            getUserName();
+        }).subscribe();
+        function getUserName() {
+            var el = $('#form-account')[0];
+            $.ajax({
+                method: 'get',
+                url: root + 'register',
+                data: {
+                    username: el.value
+                },
+                success: function (res) {
+                    if (res.isRepeat) {
+                        $(items[0])
+                            .removeClass('inputting sucess error')
+                            .addClass('error');
+                        result[0].isOK = false;
+                        result[0].msg = "" + result[0].name + el.value + "\u5DF2\u5B58\u5728\uFF01";
+                        $(tips[0]).text(result[0].msg);
+                        $(tips[0]).css('color', '#c00');
+                    }
+                }
+            });
+        }
         var subBtn = $('.btn-register');
         subBtn.click(function (e) {
+            var url = root + 'register';
             e.preventDefault();
             for (var _i = 0, result_1 = result; _i < result_1.length; _i++) {
                 var x = result_1[_i];
@@ -73,7 +101,29 @@ require(['js/config'], function () {
                     return;
                 }
             }
-            alert('注册成功');
+            $.ajax({
+                url: url,
+                method: 'post',
+                data: {
+                    name: $('#form-account').val(),
+                    pwd: $('#form-pwd').val(),
+                    email: $('#form-email').val()
+                },
+                success: function (res) {
+                    switch (res.status) {
+                        case 'success': {
+                            alert('注册成功！');
+                            $(window).attr('location', rootUrl + 'login.html');
+                            break;
+                        }
+                        case 'error': {
+                            alert('注册失败！');
+                            $('.register-form')[0].reset();
+                            break;
+                        }
+                    }
+                }
+            });
         });
     });
 });
