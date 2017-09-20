@@ -22,7 +22,9 @@ i {
   padding: 0;
 }
 i { font-style: normal; }
-
+button, input, select, textarea {
+  outline: 0;
+}
 .tab {
   .tab-nav {
     @include clearfix;

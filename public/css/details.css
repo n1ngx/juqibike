@@ -1,4 +1,6 @@
 .position {
+  width: 1200px;
+  margin: 0 auto;
   line-height: 44px; }
   .position:before, .position:after {
     content: " ";

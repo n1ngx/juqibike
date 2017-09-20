@@ -23,6 +23,9 @@ i {
 i {
   font-style: normal; }
 
+button, input, select, textarea {
+  outline: 0; }
+
 .tab .tab-nav:before, .tab .tab-nav:after {
   content: " ";
   display: table; }

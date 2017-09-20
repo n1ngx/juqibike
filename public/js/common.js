@@ -1,5 +1,5 @@
 "use strict";
-define(['jquery'], function () {
+define(function () {
     require([
         'util/load-frame'
     ], function () {

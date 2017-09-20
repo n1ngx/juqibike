@@ -1,4 +1,4 @@
-define(['jquery'], () => {
+define(() => {
   require([
     'util/load-frame'
   ], () => {

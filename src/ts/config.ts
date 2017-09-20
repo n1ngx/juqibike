@@ -3,7 +3,7 @@ try {
     baseUrl: '/public/js',
     paths: {
       jquery: 'jquery-1.12.4.min',
-      Rx: 'Rx.min'
+      Rx: 'Rx.min',
     }
   })
 } catch (e) {

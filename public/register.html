@@ -13,11 +13,67 @@
 
 <body>
 
-  <div id="frame-head"></div>
+  <div class="register-header">
+    <div class="header-box">
+      <div class="logo">
+        <img src="img/logo1.jpg" alt="">
+        <h2>欢迎注册</h2>
+      </div>
+      <div class="login">
+        已有账号？
+        <a href="javascript:">请登录</a>
+      </div>
+    </div>
+  </div>
 
-  <!-- 中间的内容 -->
+  <div class="register-body">
+    <form class="register-form" action="register" method="POST">
+      <div class="form-item">
+        <label for="form-account">用　户　名</label>
+        <input id="form-account" class="field" name="regName" placeholder="您的账户名和登录名" type="text">
+      </div>
+      <div class="input-tip">
+        <span>支持字母、数字、“-”“_”的组合，4-20个字符</span>
+      </div>
+      <div class="form-item">
+        <label for="form-pwd">设 置 密 码</label>
+        <input id="form-pwd" class="field" name="pwd" placeholder="建议至少使用两种字符组合" type="password">
+      </div>
+      <div class="input-tip">
+        <span>建议使用字母、数字和符号两种及以上的组合，6-20个字符</span>
+      </div>
+      <div class="form-item">
+        <label for="form-equalTopwd">确 认 密 码</label>
+        <input id="form-equalTopwd" class="field" name="pwdRepeat" placeholder="请再次输入密码" type="password">
+      </div>
+      <div class="input-tip">
+        <span>请再次输入密码</span>
+      </div>
+      <div class="form-item">
+        <label for="form-email">邮 箱 验 证</label>
+        <input id="form-email" class="field" name="email" placeholder="建议使用常用邮箱" type="text">
+      </div>
+      <div class="input-tip">
+        <span>完成验证后，你可以用该邮箱登录和找回密码</span>
+      </div>
+      <button class="btn-register">立即注册</button>
+    </form>
+  </div>
 
-  <div id="frame-foot"></div>
+  <div class="register-footer">
+    <div class="links">
+      <a href="javascript:"></a>
+      <a href="javascript:">免责条款</a>|
+      <a href="javascript:">隐私保护</a>|
+      <a href="javascript:">商务合作</a>|
+      <a href="javascript:">联系我们</a>|
+      <a href="javascript:">公司简介</a>
+    </div>
+    <div class="copyright">
+      © 2005-2017 聚骑网 版权所有，并保留所有权利。<br> Copyright 2015@WWW.JUQIBIKE.COM ALL RIGHT RESERVED| 粤ICP备15076381号-1
+    </div>
+  </div>
+
 
   <script src="js/require.min.js"></script>
   <script src="js/register.js"></script>

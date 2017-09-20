@@ -1,0 +1,131 @@
+.login-header {
+  height: 110px;
+  background: url(../img/headbg.jpg) repeat-x left bottom; }
+  .login-header .header-box {
+    width: 1200px;
+    margin: 0 auto; }
+    .login-header .header-box:before, .login-header .header-box:after {
+      content: " ";
+      display: table; }
+    .login-header .header-box:after {
+      clear: both; }
+  .login-header .logo {
+    float: left; }
+    .login-header .logo img {
+      height: 100px; }
+    .login-header .logo h2 {
+      display: inline-block;
+      line-height: 100px;
+      font-size: 24px;
+      font-weight: normal;
+      vertical-align: top; }
+  .login-header .login {
+    float: right;
+    font-size: 16px;
+    color: #999;
+    line-height: 100px; }
+
+.login-body {
+  background: url(../img/login-bg.jpg) no-repeat center center;
+  margin: -10px auto 0;
+  padding: 50px; }
+  .login-body .login-wrap {
+    width: 1200px;
+    margin: 0 auto; }
+    .login-body .login-wrap:before, .login-body .login-wrap:after {
+      content: " ";
+      display: table; }
+    .login-body .login-wrap:after {
+      clear: both; }
+  .login-body .login-box {
+    float: right;
+    background: #fff; }
+  .login-body .tab .tab-nav {
+    border-bottom: 1px solid #e6e6e6; }
+    .login-body .tab .tab-nav li {
+      font-size: 18px;
+      width: 173px;
+      height: 54px;
+      line-height: 54px;
+      text-align: center; }
+      .login-body .tab .tab-nav li .active {
+        color: #c00;
+        font-weight: bold; }
+  .login-body .tab .tab-panel .code {
+    padding: 10px;
+    text-align: center; }
+  .login-body .tab .tab-panel .login-form {
+    padding: 20px; }
+  .login-body .tab-foot {
+    padding: 20px;
+    border-top: 1px solid #e6e6e6; }
+    .login-body .tab-foot:before, .login-body .tab-foot:after {
+      content: " ";
+      display: table; }
+    .login-body .tab-foot:after {
+      clear: both; }
+    .login-body .tab-foot a {
+      float: right;
+      margin-left: 10px; }
+  .login-body .form-item {
+    position: relative;
+    width: 306px;
+    margin: 0 auto;
+    border: solid 1px #ddd;
+    margin-bottom: 20px; }
+    .login-body .form-item:before, .login-body .form-item:after {
+      content: " ";
+      display: table; }
+    .login-body .form-item:after {
+      clear: both; }
+    .login-body .form-item label {
+      float: left;
+      width: 38px;
+      height: 38px;
+      background: url(../img/pwd-icons-new.png) no-repeat; }
+    .login-body .form-item .field {
+      float: left;
+      border: 0 none;
+      font-size: 14px;
+      width: 190px;
+      height: 19px;
+      padding: 9px 10px; }
+  .login-body .btn-login {
+    width: 100%;
+    height: 31px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB"; }
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc; }
+
+.login-footer {
+  font-size: 12px;
+  text-align: center;
+  border-top: solid 1px #e6e6e6;
+  color: #999;
+  padding-bottom: 30px; }
+  .login-footer .links {
+    padding-top: 30px;
+    padding-bottom: 15px; }
+  .login-footer a {
+    color: #999;
+    margin: 0 10px; }

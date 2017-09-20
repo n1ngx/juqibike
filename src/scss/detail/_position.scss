@@ -1,5 +1,7 @@
 .position {
   @include clearfix;
+  width: $w;
+  margin: 0 auto;
   line-height: 44px;
   .label {
     float: left;

@@ -1,0 +1,105 @@
+.register-header {
+  height: 110px;
+  background: url(../img/headbg.jpg) repeat-x left bottom; }
+  .register-header .header-box {
+    width: 1200px;
+    margin: 0 auto; }
+    .register-header .header-box:before, .register-header .header-box:after {
+      content: " ";
+      display: table; }
+    .register-header .header-box:after {
+      clear: both; }
+  .register-header .logo {
+    float: left; }
+    .register-header .logo img {
+      height: 100px; }
+    .register-header .logo h2 {
+      display: inline-block;
+      line-height: 100px;
+      font-size: 24px;
+      font-weight: normal;
+      vertical-align: top; }
+  .register-header .login {
+    float: right;
+    font-size: 16px;
+    color: #999;
+    line-height: 100px; }
+
+.register-body {
+  margin: 50px auto 60px; }
+  .register-body .form-item {
+    position: relative;
+    width: 398px;
+    margin: 0 auto;
+    border: solid 1px #ddd; }
+    .register-body .form-item:before, .register-body .form-item:after {
+      content: " ";
+      display: table; }
+    .register-body .form-item:after {
+      clear: both; }
+    .register-body .form-item label {
+      float: left;
+      width: 90px;
+      height: 52px;
+      line-height: 52px;
+      padding-left: 20px; }
+    .register-body .form-item .field {
+      float: left;
+      border: 0 none;
+      font-size: 14px;
+      width: 248px;
+      height: 19px;
+      padding: 16px 20px; }
+  .register-body .inputting {
+    border: 1px solid skyblue; }
+  .register-body .sucess {
+    border: 1px solid green; }
+  .register-body .error {
+    border: 1px solid #c00; }
+  .register-body .input-tip {
+    width: 400px;
+    margin: 0 auto;
+    line-height: 32px;
+    color: #c5c5c5; }
+  .register-body .btn-register {
+    cursor: pointer;
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    height: 54px;
+    color: #fff;
+    background: #e22;
+    border: 0;
+    font-size: 16px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB"; }
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #ccc;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #ccc;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #ccc; }
+
+.register-footer {
+  font-size: 12px;
+  text-align: center;
+  border-top: solid 1px #e6e6e6;
+  color: #999;
+  padding-bottom: 30px; }
+  .register-footer .links {
+    padding-top: 30px;
+    padding-bottom: 15px; }
+  .register-footer a {
+    color: #999;
+    margin: 0 10px; }

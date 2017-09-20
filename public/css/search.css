@@ -1,0 +1,17 @@
+.position {
+  width: 1200px;
+  margin: 0 auto;
+  line-height: 44px; }
+  .position:before, .position:after {
+    content: " ";
+    display: table; }
+  .position:after {
+    clear: both; }
+  .position .label {
+    float: left;
+    padding: 0 10px;
+    font-weight: bold; }
+  .position ul {
+    float: left; }
+    .position ul li {
+      float: left; }
