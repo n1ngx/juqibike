@@ -290,6 +290,11 @@
 .stair {
   width: 1200px;
   margin: 0 auto; }
+  .stair .tab:before, .stair .tab:after {
+    content: " ";
+    display: table; }
+  .stair .tab:after {
+    clear: both; }
   .stair .floor .floor-2 {
     border-bottom-color: #e2cca3 !important; }
     .stair .floor .floor-2 h3 {

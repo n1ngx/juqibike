@@ -1,6 +1,6 @@
 "use strict";
 require(['js/config'], function () {
-    require(['jquery', 'Rx'], function (jq, Rx) {
+    require(['jquery'], function () {
         var form = $(".register-form"), items = form.find('.form-item'), tips = form.find('.input-tip');
         var result = [];
         // 初始化验证是否通过数组
@@ -65,10 +65,9 @@ require(['js/config'], function () {
             });
         });
         // Rx做实时判断用户名是否存在
-        var rxInput = Rx.Observable.fromEvent($('#form-account')[0], 'input');
-        rxInput.debounceTime(100).map(function (e) {
+        $('#form-account').on('input', function (e) {
             getUserName();
-        }).subscribe();
+        });
         function getUserName() {
             var el = $('#form-account')[0];
             $.ajax({

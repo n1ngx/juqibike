@@ -2,7 +2,6 @@
 define(['jquery', 'Rx'], function ($, Rx) {
     var e = $('.detail .detail-box .left .pic');
     var small = e.find('.small'), big = e.find('.big'), bigImg = e.find('.big-img'), smallImg = e.find('.small-img'), box = e.find('.box');
-    log(small, box, big, bigImg);
     var ob = Rx.Observable;
     var move = ob.fromEvent(small, 'mousemove');
     var enter = ob.fromEvent(small, 'mouseenter');

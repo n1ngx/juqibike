@@ -1,6 +1,9 @@
 .stair {
   width: $w;
   margin: 0 auto;
+  .tab {
+    @include clearfix;
+  }
   .floor {
     .floor-2 {
       $color: #e2cca3;

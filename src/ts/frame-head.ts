@@ -5,7 +5,6 @@ require(['js/config'], () => {
     }
     // 登录 退出
     let userName = localStorage.getItem('user')
-    log(userName)
     if (userName) {
       $('.login .no').hide()
       let logout = $('<a href="javascript:">退出</a>')
@@ -23,9 +22,7 @@ require(['js/config'], () => {
 
     // 搜索
     $('#search-input').on('input', (e) => {
-      if (e.target.tagName.toLowerCase() !== 'li') {
-        return
-      }
+
       let el = e.target as HTMLInputElement,
           $sug = $('.s-suggestion')
       if (el.value) {
@@ -50,6 +47,9 @@ require(['js/config'], () => {
             $('<ul>')
             .append(s)
             .click(function(e) {
+              if (e.target.tagName.toLowerCase() !== 'li') {
+                return
+              }
               $(el).val($(e.target).text())
               $sug.html('')
             })

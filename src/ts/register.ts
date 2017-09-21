@@ -1,5 +1,5 @@
 require(['js/config'], () => {
-  require(['jquery', 'Rx'], (jq: any, Rx: any) => {
+  require(['jquery'], () => {
     interface Result {
       name: string,
       isOK: boolean,
@@ -72,10 +72,10 @@ require(['js/config'], () => {
         })
     })
     // Rx做实时判断用户名是否存在
-    let rxInput = Rx.Observable.fromEvent($('#form-account')[0], 'input')
-    rxInput.debounceTime(100).map((e: KeyboardEvent) => {
+    $('#form-account').on('input', (e) => {
       getUserName()
-    }).subscribe()
+
+    })
     function getUserName() {
       let el = $('#form-account')[0] as HTMLInputElement
       $.ajax({

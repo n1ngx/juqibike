@@ -7,8 +7,6 @@ define(['jquery', 'Rx'], ($: any, Rx: any) => {
     smallImg = e.find('.small-img') as JQuery,
     box = e.find('.box') as JQuery 
 
-  log(small, box, big, bigImg)
-
   let ob = Rx.Observable
 
   let move = ob.fromEvent(small, 'mousemove')

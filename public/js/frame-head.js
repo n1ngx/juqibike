@@ -6,7 +6,6 @@ require(['js/config'], function () {
         }
         // 登录 退出
         var userName = localStorage.getItem('user');
-        log(userName);
         if (userName) {
             $('.login .no').hide();
             var logout = $('<a href="javascript:">退出</a>');
@@ -21,9 +20,6 @@ require(['js/config'], function () {
         }
         // 搜索
         $('#search-input').on('input', function (e) {
-            if (e.target.tagName.toLowerCase() !== 'li') {
-                return;
-            }
             var el = e.target, $sug = $('.s-suggestion');
             if (el.value) {
                 $sug.show();
@@ -47,6 +43,9 @@ require(['js/config'], function () {
                         .append($('<ul>')
                         .append(s)
                         .click(function (e) {
+                        if (e.target.tagName.toLowerCase() !== 'li') {
+                            return;
+                        }
                         $(el).val($(e.target).text());
                         $sug.html('');
                     }));
