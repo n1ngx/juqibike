@@ -125,6 +125,22 @@ button, input, select, textarea {
         font-weight: bold;
         color: #fff;
         background-color: #c00; }
+      .head .search .search-box .s-suggestion {
+        display: none;
+        position: absolute;
+        margin-top: 30px;
+        margin-left: -1px;
+        z-index: 1; }
+        .head .search .search-box .s-suggestion ul {
+          border: 1px solid #e6e6e6;
+          width: 398px;
+          background: #fff; }
+          .head .search .search-box .s-suggestion ul li {
+            cursor: pointer;
+            line-height: 21px;
+            padding: 0 10px; }
+            .head .search .search-box .s-suggestion ul li:hover {
+              background: #e6e6e6; }
     .head .search .hot {
       line-height: 25px; }
       .head .search .hot span {
@@ -313,8 +329,10 @@ button, input, select, textarea {
         margin-right: 4px;
         background-image: url("../img/icon-common.png");
         background-position: -287px -53px; }
-      .nav .nav-box .shop-car:hover .car {
-        display: block; }
+      .nav .nav-box .shop-car .yes-login {
+        display: none; }
+        .nav .nav-box .shop-car .yes-login:hover .car {
+          display: block; }
       .nav .nav-box .shop-car .car {
         display: none;
         width: 327px;
@@ -337,9 +355,9 @@ button, input, select, textarea {
             display: table; }
           .nav .nav-box .shop-car .car .list li:after {
             clear: both; }
-          .nav .nav-box .shop-car .car .list li .img, .nav .nav-box .shop-car .car .list li .link, .nav .nav-box .shop-car .car .list li .price, .nav .nav-box .shop-car .car .list li .del {
+          .nav .nav-box .shop-car .car .list li .pic, .nav .nav-box .shop-car .car .list li .link, .nav .nav-box .shop-car .car .list li .price, .nav .nav-box .shop-car .car .list li .del {
             float: left; }
-          .nav .nav-box .shop-car .car .list li img {
+          .nav .nav-box .shop-car .car .list li .pic img {
             display: block;
             width: 60px;
             height: 60px; }

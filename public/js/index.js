@@ -5,5 +5,7 @@ require(['js/config'], function () {
         'util/banner1',
         'util/banner2',
     ]);
+    require(['jquery'], function () {
+    });
 });
 //# sourceMappingURL=index.js.map

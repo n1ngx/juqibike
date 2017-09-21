@@ -1,10 +1,13 @@
+<script src="js/frame-head.js"></script>
 <div class="top">
   <div class="cont">
     <h1 class="title">聚骑网-中国最大的自行车网上商城</h1>
     <div class="login">
-      <div class="yes"></div>
+      <div class="yes">
+
+      </div>
       <div class="no">
-        您还没有<a href="javascript:">[登录]</a>或者<a href="javascript:">[免费注册]</a>
+        您还没有<a href="login.html">[登录]</a>或者<a href="register.html">[免费注册]</a>
       </div>
     </div>
     <div class="top-nav">
@@ -22,7 +25,7 @@
 
 <div class="head">
   <div class="logo">
-    <a href="javascript:">
+    <a href="index.html">
         <img src="img/logo1.jpg" alt="">
       </a>
   </div>
@@ -30,6 +33,8 @@
     <div class="search-box">
       <input id="search-input" class="s-input" type="text" placeholder="聚骑自行车">
       <input id="search-btn" class="s-btn" type="button" value="搜索">
+      <div class="s-suggestion">
+      </div>
     </div>
     <div class="hot">
       <span>热门搜索：</span>
@@ -355,34 +360,41 @@
       <li><a href="javascript:">限时活动</a></li>
     </ul>
     <div class="shop-car">
-      <a href="javascript:">
+      <div class="no-login">
+        <a href="login.html"><i></i>登录后查看购物车！</a>
+      </div>
+      <div class="yes-login">
+        <a id="shopcar" href="javascript:">
           <i></i>
           购物车中共有
           <span class="shop-count">0</span>
           件
         </a>
-      <div class="car">
-        <div class="nothing"></div>
-        <ul class="list">
-          <li>
-            <div class="img">
-              <img src="img/1f44.jpg" alt="">
-            </div>
-            <div class="link">
-              <a href="javascript:">永久折叠自行车14寸蓝色大气经...</a>
-            </div>
-            <div class="price">￥350x1</div>
-            <div class="del">
-              <a href="javascript:">删除</a>
-            </div>
-          </li>
-        </ul>
-        <div class="pay">
-          <div class="total">
-            <p>共计<span>1</span>件商品</p>
-            <p class="money">总计：<span>￥638</span>元</p>
+        <div class="car">
+          <div class="nothing" style="text-align: center;">
+            购物车中空空如也……
           </div>
-          <div class="pay-btn">
+          <ul class="list">
+            <li>
+              <div class="pic">
+                <img src="img/1f44.jpg" alt="">
+              </div>
+              <div class="link">
+                <a href="javascript:">永久折叠自行车14寸蓝色大气经...</a>
+              </div>
+              <div class="price">￥<span>350</span>x<span>1</span></div>
+              <div class="del">
+                <a href="javascript:">删除</a>
+              </div>
+            </li>
+          </ul>
+          <div class="pay">
+            <div class="total">
+              <p>共计<span>1</span>件商品</p>
+              <p class="money">总计：<span>￥638</span>元</p>
+            </div>
+            <div class="pay-btn">
+            </div>
           </div>
         </div>
       </div>

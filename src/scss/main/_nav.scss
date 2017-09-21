@@ -153,6 +153,7 @@
       position: relative;
       float: right;
       padding-right: 30px;
+
       a {
         i {
           display: inline-block;
@@ -164,9 +165,12 @@
           background-position: -287px -53px;
         }
       }
-      &:hover {
-        .car {
-          display: block;
+      .yes-login {
+        display: none;
+        &:hover {
+          .car {
+            display: block;
+          }
         }
       }
       .car {
@@ -189,10 +193,10 @@
             padding: 10px;
             line-height: 60px;
             background: #fff;
-            .img, .link, .price, .del {
+            .pic, .link, .price, .del {
               float: left;
             }
-            img {
+            .pic img {
               display: block;
               width: 60px;
               height: 60px;

@@ -36,6 +36,26 @@
         color: #fff;
         background-color: $red;
       }
+      .s-suggestion {
+        display: none;
+        position: absolute;
+        margin-top: 30px;
+        margin-left: -1px;
+        z-index: 1;
+        ul {
+          border: 1px solid $border-gray;
+          width: 398px;
+          background: #fff;
+          li {
+            cursor: pointer;
+            line-height: 21px;
+            padding: 0 10px;
+            &:hover {
+              background: $border-gray;
+            }
+          }
+        }
+      }
     }
     .hot {
       line-height: 25px;

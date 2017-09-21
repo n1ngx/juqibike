@@ -1,6 +1,5 @@
 "use strict";
 define(['jquery'], function () {
-    log($('.back-to-top a'));
     $('.back-to-top a').click(function () {
         $('html').animate({
             scrollTop: 0

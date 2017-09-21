@@ -24,7 +24,7 @@ require(['js/config'], () => {
           alert(res.status)
           if (res.status === '登录成功！') {
             localStorage.setItem('user', res.name)
-            $(window).attr('location', 'index.html')
+            $(window).attr('location', rootUrl)
           }
         }
       })

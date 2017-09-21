@@ -4,4 +4,7 @@ require(['js/config'], () => {
     'util/banner1', 
     'util/banner2',
   ])
+  require(['jquery'], () => {
+    
+  })
 })
