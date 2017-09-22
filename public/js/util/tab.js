@@ -20,10 +20,12 @@ define(['jquery'], function () {
                 $(el).removeClass('active');
             });
             $(navs[i]).addClass('active');
-            panels.each(function (panelIndex, panelEl) {
-                $(panelEl).hide();
-            });
             $(panels[i]).fadeIn(200);
+            panels.each(function (panelIndex, panelEl) {
+                if (panelIndex !== i) {
+                    $(panelEl).hide();
+                }
+            });
         }
     });
 });

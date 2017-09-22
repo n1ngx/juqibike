@@ -20,10 +20,12 @@ define(['jquery'], () => {
         $(el).removeClass('active')
       })
       $(navs[i]).addClass('active')
-      panels.each((panelIndex, panelEl) => {
-        $(panelEl).hide()
-      })
       $(panels[i]).fadeIn(200)
+      panels.each((panelIndex, panelEl) => {
+        if (panelIndex !== i) {
+          $(panelEl).hide()
+        }
+      })
     }
   })
 })
