@@ -34,4 +34,3 @@ function switchEnv(e) {
 switchEnv(now);
 log(root);
 var rootUrl = '/public/';
-//# sourceMappingURL=config.js.map

@@ -45,4 +45,3 @@ define(['jquery'], function () {
         });
     }
 });
-//# sourceMappingURL=banner1.js.map

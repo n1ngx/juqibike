@@ -6,4 +6,3 @@ define(['jquery'], function () {
         }, 500);
     });
 });
-//# sourceMappingURL=back-to-top.js.map

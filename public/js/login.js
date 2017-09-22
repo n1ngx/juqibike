@@ -31,4 +31,3 @@ require(['js/config'], function () {
         });
     });
 });
-//# sourceMappingURL=login.js.map

@@ -4,4 +4,3 @@ require(['js/config'], function () {
         'common',
     ]);
 });
-//# sourceMappingURL=search.js.map

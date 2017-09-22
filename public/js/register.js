@@ -126,4 +126,3 @@ require(['js/config'], function () {
         });
     });
 });
-//# sourceMappingURL=register.js.map

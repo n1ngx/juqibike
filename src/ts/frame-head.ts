@@ -78,8 +78,9 @@ require(['js/config'], () => {
           list.hide()
           shopcar.find('.pay').hide()
         }
+        log(res)
         let str = ats(res, v => `
-          <li>
+          <li good-id="${v.goodId}">
             <div class="pic">
               <img src="${v.img}" alt="">
             </div>
@@ -95,13 +96,27 @@ require(['js/config'], () => {
         list
         .html(str)
         .find('a').click(function(this: HTMLElement, e: MouseEvent) {
-          $(this).parent().parent().remove()
-          if (list.children().length === 0) {
-            nothing.show()
-            list.hide()
-            shopcar.find('.pay').hide()
-          }
-          count()
+          // 删除列表
+          let li = $(this).parent().parent()
+          log(li)
+          $.ajax({
+            type: 'delete',
+            url: root + 'shopcar',
+            data: {
+              username: localStorage.getItem('user'),
+              goodId: li.attr('good-id')
+            },
+            success: (res) => {
+              log(res)
+              $(this).parent().parent().remove()
+              if (list.children().length === 0) {
+                nothing.show()
+                list.hide()
+                shopcar.find('.pay').hide()
+              }
+              count()
+            }
+          })
         })
         $('#shopcar .shop-count').text(res.length)
         function count() {

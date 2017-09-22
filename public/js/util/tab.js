@@ -29,4 +29,3 @@ define(['jquery'], function () {
         }
     });
 });
-//# sourceMappingURL=tab.js.map

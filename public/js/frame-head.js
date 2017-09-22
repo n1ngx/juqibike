@@ -71,17 +71,33 @@ require(['js/config'], function () {
                     list.hide();
                     shopcar.find('.pay').hide();
                 }
-                var str = ats(res, function (v) { return "\n          <li>\n            <div class=\"pic\">\n              <img src=\"" + v.img + "\" alt=\"\">\n            </div>\n            <div class=\"link\">\n              <a href=\"javascript:\">" + v.msg + "</a>\n            </div>\n            <div class=\"price\">\uFFE5<span>" + v.price + "</span>x<span>" + v.num + "</span></div>\n            <div class=\"del\">\n              <a href=\"javascript:\">\u5220\u9664</a>\n            </div>\n          </li>\n        "; });
+                log(res);
+                var str = ats(res, function (v) { return "\n          <li good-id=\"" + v.goodId + "\">\n            <div class=\"pic\">\n              <img src=\"" + v.img + "\" alt=\"\">\n            </div>\n            <div class=\"link\">\n              <a href=\"javascript:\">" + v.msg + "</a>\n            </div>\n            <div class=\"price\">\uFFE5<span>" + v.price + "</span>x<span>" + v.num + "</span></div>\n            <div class=\"del\">\n              <a href=\"javascript:\">\u5220\u9664</a>\n            </div>\n          </li>\n        "; });
                 list
                     .html(str)
                     .find('a').click(function (e) {
-                    $(this).parent().parent().remove();
-                    if (list.children().length === 0) {
-                        nothing.show();
-                        list.hide();
-                        shopcar.find('.pay').hide();
-                    }
-                    count();
+                    var _this = this;
+                    // 删除列表
+                    var li = $(this).parent().parent();
+                    log(li);
+                    $.ajax({
+                        type: 'delete',
+                        url: root + 'shopcar',
+                        data: {
+                            username: localStorage.getItem('user'),
+                            goodId: li.attr('good-id')
+                        },
+                        success: function (res) {
+                            log(res);
+                            $(_this).parent().parent().remove();
+                            if (list.children().length === 0) {
+                                nothing.show();
+                                list.hide();
+                                shopcar.find('.pay').hide();
+                            }
+                            count();
+                        }
+                    });
                 });
                 $('#shopcar .shop-count').text(res.length);
                 function count() {
@@ -116,4 +132,3 @@ require(['js/config'], function () {
         // 
     });
 });
-//# sourceMappingURL=frame-head.js.map

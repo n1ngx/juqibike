@@ -35,4 +35,3 @@ define(['jquery', 'Rx'], function ($, Rx) {
         box.css('top', y);
     });
 });
-//# sourceMappingURL=fangdajing.js.map

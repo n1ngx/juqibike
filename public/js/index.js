@@ -27,4 +27,3 @@ require(['js/config'], function () {
         //---
     }
 });
-//# sourceMappingURL=index.js.map

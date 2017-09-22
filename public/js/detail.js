@@ -5,4 +5,3 @@ require(['js/config'], function () {
         'util/fangdajing',
     ]);
 });
-//# sourceMappingURL=detail.js.map

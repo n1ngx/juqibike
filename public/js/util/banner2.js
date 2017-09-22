@@ -76,4 +76,3 @@ define(['jquery'], function () {
         });
     }
 });
-//# sourceMappingURL=banner2.js.map
